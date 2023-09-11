@@ -1,0 +1,31 @@
+//  basic-page-styling
+//  ---
+//  this is template-level stuff that applies to each page.
+
+.main-content-display-title {
+  background: none !important;
+  color: #333 !important;
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+
+  @include font-size(4rem);
+}
+h1.main-content-display-title:after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  border: 2px solid #f00;
+  left: calc(50% - 2rem);
+  top: calc(100% + 1rem);
+}
+
+//  removes extra space at end of page
+.main-col.pb-3.col.order-lg-2.order-sm-1.col-12.px-0 {
+  padding-bottom: 0 !important;
+}
+
+.node--unpublished {
+  padding: 0;
+}

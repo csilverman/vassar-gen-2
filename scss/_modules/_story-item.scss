@@ -1,0 +1,189 @@
+/*	story-item
+	===
+	This is a large, clickable card. It differs from a call-to-action card
+	in that it typically indicates a story or page, not a resource/action. 
+
+  There are these:
+  - two-col
+    - 60-40 (wide image)
+    - small-image
+  - one-col
+
+  @todo
+  - assemble markup for both
+  - organize this file better
+  - write up specs for the different kinds
+  
+
+*/
+
+/* STORIES LIST */
+.stories-item {
+  padding: 1.4rem;
+  position: relative;
+  z-index: 1;
+  transition: 0.4s all ease;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+.stories-list {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.stories-item h2:after {
+  transition: 0.4s all ease;
+}
+.stories-item:hover h2 {
+  color: #951829;
+}
+.stories-item:hover h2:after {
+  width: 12rem;
+}
+.stories-item-text h2 {
+  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif;
+  line-height: 1.1;
+  font-size: 2.3rem;
+}
+.stories-item-image {
+  overflow: hidden;
+
+  @include breakpoint("medium", "max") {
+    margin-bottom: 1rem;
+  }
+}
+.stories-item img {
+  transition: 0.4s all ease;
+}
+.stories-item:hover img {
+  transform: scale(1.1);
+}
+.stories-item-text p {
+  font-size: 1.16rem;
+}
+.stories-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-color: transparent;
+  z-index: 10;
+}
+
+/*	stories-item--50-50 */
+/*	stories-item--60-40 */
+
+.stories-item {
+  &.cols-60-40 {
+    @include breakpoint("medium") {
+      display: flex;
+      gap: 2rem;
+    }
+    .stories-item-image {
+      @include breakpoint("medium") {
+        max-width: 60%;
+      }
+    }
+  }
+}
+.stories-item-text {
+  flex: 1;
+}
+
+/*	stories-item--small
+
+*/
+
+.stories-item {
+  border: none;
+  margin-bottom: 2rem;
+}
+.stories-item-text a {
+  text-decoration: none !important;
+}
+.stories-item-text h2 {
+  font-weight: bold !important;
+}
+.stories-item-image.small-image {
+  min-width: 10rem;
+  max-width: 40%;
+}
+.stories-item-text:hover h2 {
+  color: #e00 !important;
+}
+.stories-item-text a {
+  color: #444 !important;
+}
+.stories-item-text a:hover,
+.stories-item-text a:focus {
+  background-color: transparent !important;
+  color: #444 !important;
+}
+.stories-item-text a.stretched-link:focus:after {
+  border: 2px solid #f00;
+}
+
+.stories-column-row .stories-item {
+  gap: 1rem;
+}
+.stories-column-row .stories-item-text h2 {
+  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif !important;
+  font-variation-settings: "wght" 700;
+  font-size: 1.6rem;
+}
+.stories-column-row .stories-item-text h2:after {
+  left: 0;
+}
+
+a.stories-item {
+  text-decoration: none;
+}
+a.stories-item:hover {
+  background: #fff !important;
+}
+
+//  tiles are always meant to be displayed in a grid. Any space
+//  around them should be a gap, not a margin.
+//  If a tile is on its own (floated to the right in a story, say)
+//  it should be in a container to which the margin/float is applied.
+
+.stories-item.tile {
+  flex-direction: column-reverse;
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+
+  a.stretched-link:focus:after {
+    border: 1px solid #e00;
+  }
+}
+.stories-item.tile .stories-item-title {
+  margin: 0.6rem 0 0 0;
+  padding: 0;
+  font-size: 1.3rem;
+  font-variation-settings: "wght" 700;
+  line-height: 1.3;
+  //  make sure the stretched-link fills tile
+  position: unset;
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: transparent !important;
+      color: #951829 !important;
+    }
+  }
+}
+.stories-item.tile .stories-item-title:after {
+  //  display: none;
+}
+
+.stories-item.tile .stories-item-title:after {
+  left: 0;
+}
+.stories-item.tile .stories-item-title:after {
+  left: 1.4rem;
+  margin-top: -0.9rem;
+}

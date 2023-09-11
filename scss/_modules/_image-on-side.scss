@@ -1,0 +1,50 @@
+/*
+image-on-side
+===
+
+MARKUP
+---
+
+*/
+
+.image-on-side .content {
+	max-width: none;
+}
+.image-on-side .layout {
+	display: flex;
+/*    height: 100vh; */
+	align-items: center;
+	gap: 4%;
+}
+
+
+.layout-text-col {
+	max-width: 40rem;
+}
+.layout-text-col__inner {
+	max-width: 40rem;
+}
+
+.layout-image-col img {
+	max-height: 100vh;
+	width: auto;
+}
+
+.image-on-side img {
+	opacity: 0;
+	transform: scale(0.9);
+	transition: 1s all ease;
+}
+.image-on-side.top-50pfrom-topOfWindow img {
+	opacity: 1;
+	transform: scale(1);
+}
+.image-on-side .layout-text-col__inner {
+	opacity: 0;
+	transform: translate(-4rem);
+	transition: 1s all ease;
+}
+.image-on-side.top-50pfrom-topOfWindow .layout-text-col__inner {
+	opacity: 1;
+	transform: translate(0);
+}

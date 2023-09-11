@@ -1,0 +1,8 @@
+.fade-in-on-scroll {
+opacity: 0;
+transition: 1s all ease;
+}
+.fade-in-on-scroll.top-75pfrom-topOfWindow,
+.fade-in-on-scroll.is-activated {
+opacity: 1;
+}

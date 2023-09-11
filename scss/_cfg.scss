@@ -1,0 +1,11 @@
+//	There are better ways to do this - like using maps for things - but 
+//	for now, I'm keeping it simple.
+
+//	Breakpoints
+$bp-medium: 40rem;
+
+$breakpoints: (
+	"small": 30em,
+	"medium": 50em,
+	"large": 70em
+);	

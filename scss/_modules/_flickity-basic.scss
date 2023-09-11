@@ -1,0 +1,35 @@
+/* Flickity
+
+This was the beginning of a basic Flickity slideshow. It's not used on the current site.
+
+*/
+/*	LAYOUT
+  ====== */
+.flickity-viewport {
+  position: relative;
+  height: 100% !important;
+}
+.carousel {
+  height: var(--carousel-height, 40em);
+}
+:root {
+  --carousel-height: 30rem;
+}
+.carousel-cell * {
+  height: 100%;
+}
+.carousel .carousel-cell {
+  height: 100%;
+  margin-right: 3em;
+  position: absolute;
+  width: fit-content;
+}
+.carousel .carousel-cell img {
+  height: 100%;
+  width: auto;
+}
+.figcaption {
+  position: absolute;
+  max-width: 60ch;
+}
+/* End Flickity */

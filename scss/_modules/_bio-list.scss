@@ -1,0 +1,88 @@
+/* 	Bio listing
+	===
+	This component is used on the EP Contact page.
+*/
+
+.bioList--minimal {
+  display: grid;
+  gap: 0.4rem;
+  @include breakpoint("small") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint("medium") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.bioCard-minimal__title {
+  margin-top: 0;
+}
+.bioList--minimal .bioCard-minimal {
+  padding: 1rem;
+  --bg-color: #ebf0f0;
+}
+.bioCard-minimal {
+  background-color: var(--bg-color);
+}
+.bioCard-twoCols {
+  margin-bottom: 2rem;
+
+  @include breakpoint("medium") {
+    display: flex;
+    gap: 2rem;
+  }
+}
+.bioCard-twoCols-image {
+  width: 25%;
+  @include breakpoint("medium", "max") {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1.4rem;
+  }
+  @include breakpoint("medium") {
+    width: 28%;
+  }
+}
+.bioCard-twoCols-image img {
+  width: 100%;
+}
+.bioCard-twoCols-text {
+  flex: 1;
+}
+.bioCard-twoCols-subtitle {
+  display: block;
+  font-size: 80%;
+}
+
+h3.bioCard-twoCols-title.card-title {
+  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif;
+  font-size: 2rem;
+  padding-top: 0;
+}
+span.bioCard-twoCols-subtitle {
+  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  font-size: 1.2rem;
+  font-variation-settings: "wght" 500;
+  color: #666;
+}
+.smol h3.bioCard-twoCols-title.card-title {
+  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif !important;
+  font-size: 1.4rem;
+  padding: 0;
+}
+h3.bioCard-minimal__title {
+  padding: 0 0 0.4rem 0;
+  font-size: 1.2rem !important;
+  line-height: 1.2;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 0.4rem;
+}
+.bioList--minimal .title {
+  font-size: 1.06rem;
+  font-variation-settings: "wght" 400;
+  line-height: 1.3;
+}

@@ -1,0 +1,15 @@
+@mixin breakpoint($break, $min-or-max:'min') {
+	// Sets up a media query. This expects that all of a project's breakpoints will
+	// be stored in a map named $breakpoints, as follows:
+
+	//	$breakpoints: (
+	//		"small": 30em,
+	//		"medium": 50em,
+	//		"large": 70em
+	//	);	
+
+	$screen-size: map-get($breakpoints, $break);
+	@media screen and (#{$min-or-max}-width: $screen-size) {
+		@content
+	}
+}

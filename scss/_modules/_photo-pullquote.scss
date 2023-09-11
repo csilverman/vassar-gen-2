@@ -1,0 +1,86 @@
+/* VISUAL PULLQUOTE */
+
+.q-border {
+  display: none;
+}
+.visual-pullquote {
+  .content.py-3 {
+    padding: 0 !important;
+  }
+}
+@include breakpoint("medium") {
+  .q-border {
+    width: 100%;
+    height: 100vh;
+    border: 4rem solid #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  .visual-pullquote {
+    padding: 0;
+    height: 150vh;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    position: relative;
+  }
+  .visual-pullquote .content {
+    max-width: none;
+  }
+  .pullquote-bg img {
+    position: fixed;
+    top: 0;
+    transition: 1s all ease;
+  }
+  .pullquote-bg .field--name-field-media-image {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .pullquote-bg {
+    position: relative;
+    /*    clip-path: inset(0 0 0 0); */
+    height: 100vh;
+    /*    margin: 4rem; */
+  }
+  .top-0pfrom-topOfWindow-tog .pullquote-bg img {
+    filter: grayscale(1);
+    opacity: 0.1;
+  }
+  .top-0pfrom-topOfWindow-tog .q-border {
+    opacity: 1;
+  }
+  .pullquote-text {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .pullquote-text .intro-text {
+    max-width: 50rem;
+  }
+  .pullquote-text {
+    flex-direction: column;
+  }
+}
+.visual-pullquote {
+  .intro-text {
+    font-size: calc(1.375rem + 1.5vw) !important;
+    font-weight: 300;
+    line-height: 1;
+  }
+  @include breakpoint("medium") {
+    .intro-text {
+      font-size: 2.5rem !important;
+    }
+  }
+}

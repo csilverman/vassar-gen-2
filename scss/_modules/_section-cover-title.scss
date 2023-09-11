@@ -1,0 +1,89 @@
+/* START SECTION TITLE */
+
+//  @todo
+//  Change font-size so it's clamped at a min and max size
+
+.section-title {
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
+  line-height: 1;
+}
+@media (min-width: 75rem) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+h2.section-title span {
+  display: block;
+}
+
+//  hack. Go back and replace the BS vh-100 class with
+//  a responsive version: vh-med-100.
+.row-section-title.vh-100 {
+  height: unset !important;
+
+  @include breakpoint("medium") {
+    height: 100vh !important;
+  }
+}
+
+.section-title-container {
+  @include breakpoint("medium") {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    height: 100vh;
+    margin: 2rem;
+    padding: 0 calc((100vw - 70rem) / 2);
+  }
+}
+.section-title-overview,
+.section-title-column {
+  @include breakpoint("medium") {
+    width: 50%;
+  }
+}
+.section-title-overview {
+  flex: 1;
+}
+.row-section-title {
+  position: relative;
+  clip-path: inset(0 0 0 0);
+  padding: 2rem !important;
+}
+
+.section-title-overview {
+  opacity: 0;
+  transition: 1s all ease;
+}
+.top-25pfrom-topOfWindow .section-title-overview {
+  opacity: 1;
+}
+.section-title-overview p {
+  font-size: 1.46rem;
+  font-variation-settings: "wght" 300;
+}
+h2.section-title .super-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  margin-bottom: 1rem;
+}
+h2.section-title .main-title {
+  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif;
+}
+.row-section-title .content h2:after {
+  display: none;
+}
+h2.section-title {
+  line-height: 1;
+}
+
+h2.section-title .super-title {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+}

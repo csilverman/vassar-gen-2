@@ -1,0 +1,36 @@
+.xw-4 .content {
+  max-width: 76rem;
+}
+.xw-full .content {
+  max-width: none;
+}
+
+.breakout,
+.width-fullscreen {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+  right: 50%;
+  position: relative;
+  width: calc(100vw - 20px);
+}
+.row-full-width .content {
+  max-width: none;
+}
+.row-width-wide .content {
+  max-width: 60rem;
+}
+.row-full-width {
+  padding-left: 0;
+  padding-right: 0;
+}
+.row-width-2 .content.py-3 {
+  max-width: 52rem;
+}
+.row-width-3 .content.py-3 {
+  max-width: 62rem;
+}
+.mw-2 .content.py-3 {
+  max-width: 58rem;
+}

@@ -1,0 +1,30 @@
+.bg-extralightgray {
+  background: #dee2e6;
+  --row-bg: #dee2e6;
+}
+
+.component--main-content {
+  background: var(--row-bg, transparent);
+}
+.content p,
+.content h2 {
+  color: var(--text-color, #4a4a4a);
+}
+.row-theme-charcoal {
+  --row-bg: #222;
+  --text-color: #ccc;
+}
+.row-theme-lightgray {
+  --row-bg: #ebf0f0;
+}
+
+.theme-lightgray {
+  --bg-color: #ebf0f0;
+}
+.bg-light-gray {
+  background: #eee;
+}
+.bg-watermark-gray {
+  /* called "Cream" on Alums; a reworking of that weird peach color that's part of our branding but nobody likes */
+  background-color: rgb(248, 247, 245);
+}

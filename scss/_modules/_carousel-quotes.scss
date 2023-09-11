@@ -1,0 +1,27 @@
+.carousel--quotes {
+  height: var(--carousel-height, 20rem);
+}
+.carousel--quotes button {
+  width: 3rem;
+}
+.carousel--quotes .carousel-inner {
+  height: 100%;
+}
+.carousel--quotes .carousel-item {
+  padding: 4rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: var(--row-bg, #fff);
+}
+.carousel--quotes .carousel-item-text-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.carousel--quotes .carousel-indicators [data-bs-target] {
+  background-color: #000;
+}

@@ -1,0 +1,775 @@
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* photo-feature */
+.image-on-side {
+  /*
+	padding: 0;
+	min-height: 100vh;
+*/ }
+
+h2.main-content-display-title {
+  margin-bottom: 3rem; }
+
+.w-content {
+  width: 40rem;
+  margin: 0 auto 4rem auto; }
+
+.content h2 {
+  position: relative;
+  margin-bottom: 2rem; }
+
+.content h2:after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  border-top: 2px solid #f00;
+  left: 0;
+  top: 100%; }
+
+/*
+Commented out since it looked poor on regular h2s
+*/
+/*
+.center-title .content h2:after {
+	left: calc(50% - 2rem);
+}
+*/
+.content-example p {
+  font-size: 1.4rem;
+  line-height: 1.4; }
+
+h1.main-content-display-title {
+  position: relative; }
+
+/* New styling */
+h2.main-content-display-title:after,
+.center-title h2:after {
+  left: calc(50% - 2rem); }
+
+h2.left-align:after {
+  left: 0 !important; }
+
+.nice-link {
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 0.2em; }
+
+.main-content-display-title {
+  background: none !important;
+  color: #333 !important;
+  text-align: center !important;
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+  font-size: calc(1.525rem + 3.3vw); }
+  @media (min-width: 1200px) {
+    .main-content-display-title {
+      font-size: 4rem; } }
+h1.main-content-display-title:after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  border: 2px solid #f00;
+  left: calc(50% - 2rem);
+  top: calc(100% + 1rem); }
+
+.main-col.pb-3.col.order-lg-2.order-sm-1.col-12.px-0 {
+  padding-bottom: 0 !important; }
+
+.node--unpublished {
+  padding: 0; }
+
+.bg-extralightgray {
+  background: #dee2e6;
+  --row-bg: #dee2e6; }
+
+.component--main-content {
+  background: var(--row-bg, transparent); }
+
+.content p,
+.content h2 {
+  color: var(--text-color, #4a4a4a); }
+
+.row-theme-charcoal {
+  --row-bg: #222;
+  --text-color: #ccc; }
+
+.row-theme-lightgray {
+  --row-bg: #ebf0f0; }
+
+.theme-lightgray {
+  --bg-color: #ebf0f0; }
+
+.bg-light-gray {
+  background: #eee; }
+
+.bg-watermark-gray {
+  /* called "Cream" on Alums; a reworking of that weird peach color that's part of our branding but nobody likes */
+  background-color: #f8f7f5; }
+
+.serif-large {
+  /* intro-text should be "serif-larger" */
+  font-family: var(--serif);
+  font-size: 2.2rem !important;
+  line-height: 1.1 !important;
+  margin-bottom: 2rem;
+  margin-top: 0; }
+
+.fade-in-on-scroll {
+  opacity: 0;
+  transition: 1s all ease; }
+
+.fade-in-on-scroll.top-75pfrom-topOfWindow,
+.fade-in-on-scroll.is-activated {
+  opacity: 1; }
+
+.xw-4 .content {
+  max-width: 76rem; }
+
+.xw-full .content {
+  max-width: none; }
+
+.breakout,
+.width-fullscreen {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+  right: 50%;
+  position: relative;
+  width: calc(100vw - 20px); }
+
+.row-full-width .content {
+  max-width: none; }
+
+.row-width-wide .content {
+  max-width: 60rem; }
+
+.row-full-width {
+  padding-left: 0;
+  padding-right: 0; }
+
+.row-width-2 .content.py-3 {
+  max-width: 52rem; }
+
+.row-width-3 .content.py-3 {
+  max-width: 62rem; }
+
+.mw-2 .content.py-3 {
+  max-width: 58rem; }
+
+.intro-text {
+  color: #7b2626; }
+
+.breakout .intro-text {
+  max-width: 54rem;
+  margin: 2rem auto 4rem auto;
+  text-align: center; }
+
+.testimonial {
+  background-color: #f8f7f5;
+  padding: 1.6rem;
+  border-radius: 1rem; }
+
+.testimonial p {
+  font-size: 1.1rem; }
+
+/* 	Bio listing
+	===
+	This component is used on the EP Contact page.
+*/
+.bioList--minimal {
+  display: grid;
+  gap: 0.4rem; }
+  @media screen and (min-width: 30em) {
+    .bioList--minimal {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (min-width: 50em) {
+    .bioList--minimal {
+      grid-template-columns: repeat(4, 1fr); } }
+.bioCard-minimal__title {
+  margin-top: 0; }
+
+.bioList--minimal .bioCard-minimal {
+  padding: 1rem;
+  --bg-color: #ebf0f0; }
+
+.bioCard-minimal {
+  background-color: var(--bg-color); }
+
+.bioCard-twoCols {
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 50em) {
+    .bioCard-twoCols {
+      display: flex;
+      gap: 2rem; } }
+.bioCard-twoCols-image {
+  width: 25%; }
+  @media screen and (max-width: 50em) {
+    .bioCard-twoCols-image {
+      float: left;
+      margin-right: 1rem;
+      margin-bottom: 1.4rem; } }
+  @media screen and (min-width: 50em) {
+    .bioCard-twoCols-image {
+      width: 28%; } }
+.bioCard-twoCols-image img {
+  width: 100%; }
+
+.bioCard-twoCols-text {
+  flex: 1; }
+
+.bioCard-twoCols-subtitle {
+  display: block;
+  font-size: 80%; }
+
+h3.bioCard-twoCols-title.card-title {
+  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif;
+  font-size: 2rem;
+  padding-top: 0; }
+
+span.bioCard-twoCols-subtitle {
+  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.2rem;
+  font-variation-settings: "wght" 500;
+  color: #666; }
+
+.smol h3.bioCard-twoCols-title.card-title {
+  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-size: 1.4rem;
+  padding: 0; }
+
+h3.bioCard-minimal__title {
+  padding: 0 0 0.4rem 0;
+  font-size: 1.2rem !important;
+  line-height: 1.2;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 0.4rem; }
+
+.bioList--minimal .title {
+  font-size: 1.06rem;
+  font-variation-settings: "wght" 400;
+  line-height: 1.3; }
+
+/* 	CAST OF CHARACTERS
+	===
+	This component isn't used in EP yet.
+*/
+.character-item-avatar {
+  overflow: hidden;
+  width: 8rem;
+  height: 8rem; }
+
+.character-item {
+  display: flex;
+  align-items: s; }
+
+.character-item p {
+  margin: 0; }
+
+.cast-of-characters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+  gap: 0.4rem;
+  max-width: 84rem;
+  margin: 0 auto; }
+
+.character-item-avatar {
+  position: relative; }
+
+.character-item-avatar img {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+  border-radius: 50%; }
+
+.character-item-text {
+  flex: 1; }
+
+.character-item-text {
+  flex: 1; }
+
+.character-item {
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem; }
+
+.character-item p {
+  font-size: 1.1rem; }
+
+.character-item p {
+  font-size: 1.1rem; }
+
+p.character-item-name {
+  font-weight: bold;
+  font-variation-settings: "wght" 700; }
+
+p.character-item-title {
+  font-variation-settings: "wght" 500;
+  color: #888;
+  font-size: 1rem; }
+
+p.character-item-bio {
+  margin-top: 0.4rem;
+  line-height: 1.1; }
+
+/* END CAST OF CHARACTERS */
+.carousel--quotes {
+  height: var(--carousel-height, 20rem); }
+
+.carousel--quotes button {
+  width: 3rem; }
+
+.carousel--quotes .carousel-inner {
+  height: 100%; }
+
+.carousel--quotes .carousel-item {
+  padding: 4rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: var(--row-bg, #fff); }
+
+.carousel--quotes .carousel-item-text-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 40rem;
+  margin: 0 auto; }
+
+.carousel--quotes .carousel-indicators [data-bs-target] {
+  background-color: #000; }
+
+/* Flickity
+
+This was the beginning of a basic Flickity slideshow. It's not used on the current site.
+
+*/
+/*	LAYOUT
+  ====== */
+.flickity-viewport {
+  position: relative;
+  height: 100% !important; }
+
+.carousel {
+  height: var(--carousel-height, 40em); }
+
+:root {
+  --carousel-height: 30rem; }
+
+.carousel-cell * {
+  height: 100%; }
+
+.carousel .carousel-cell {
+  height: 100%;
+  margin-right: 3em;
+  position: absolute;
+  width: fit-content; }
+
+.carousel .carousel-cell img {
+  height: 100%;
+  width: auto; }
+
+.figcaption {
+  position: absolute;
+  max-width: 60ch; }
+
+/* End Flickity */
+/*
+image-on-side
+===
+
+MARKUP
+---
+
+*/
+.image-on-side .content {
+  max-width: none; }
+
+.image-on-side .layout {
+  display: flex;
+  /*    height: 100vh; */
+  align-items: center;
+  gap: 4%; }
+
+.layout-text-col {
+  max-width: 40rem; }
+
+.layout-text-col__inner {
+  max-width: 40rem; }
+
+.layout-image-col img {
+  max-height: 100vh;
+  width: auto; }
+
+.image-on-side img {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: 1s all ease; }
+
+.image-on-side.top-50pfrom-topOfWindow img {
+  opacity: 1;
+  transform: scale(1); }
+
+.image-on-side .layout-text-col__inner {
+  opacity: 0;
+  transform: translate(-4rem);
+  transition: 1s all ease; }
+
+.image-on-side.top-50pfrom-topOfWindow .layout-text-col__inner {
+  opacity: 1;
+  transform: translate(0); }
+
+/*
+layout-text-col
+===
+
+MARKUP
+---
+
+*/
+/* VISUAL PULLQUOTE */
+.q-border {
+  display: none; }
+
+.visual-pullquote .content.py-3 {
+  padding: 0 !important; }
+
+@media screen and (min-width: 50em) {
+  .q-border {
+    width: 100%;
+    height: 100vh;
+    border: 4rem solid #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: 1s all ease; }
+  .visual-pullquote {
+    padding: 0;
+    height: 150vh;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    position: relative; }
+  .visual-pullquote .content {
+    max-width: none; }
+  .pullquote-bg img {
+    position: fixed;
+    top: 0;
+    transition: 1s all ease; }
+  .pullquote-bg .field--name-field-media-image {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%; }
+  .pullquote-bg {
+    position: relative;
+    /*    clip-path: inset(0 0 0 0); */
+    height: 100vh;
+    /*    margin: 4rem; */ }
+  .top-0pfrom-topOfWindow-tog .pullquote-bg img {
+    filter: grayscale(1);
+    opacity: 0.1; }
+  .top-0pfrom-topOfWindow-tog .q-border {
+    opacity: 1; }
+  .pullquote-text {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center; }
+  .pullquote-text .intro-text {
+    max-width: 50rem; }
+  .pullquote-text {
+    flex-direction: column; } }
+
+.visual-pullquote .intro-text {
+  font-size: calc(1.375rem + 1.5vw) !important;
+  font-weight: 300;
+  line-height: 1; }
+
+@media screen and (min-width: 50em) {
+  .visual-pullquote .intro-text {
+    font-size: 2.5rem !important; } }
+
+/*	This was used on https://www.vassar.edu/engaged-pluralism/test-engaged-pluralism-story-example-1
+	It's the first item on the page, but is no longer working. 
+
+	This is *not* the visual pullquote.
+	
+*/
+.scroll-photo-combo__photo {
+  transition: 1s all ease; }
+
+.scroll-photo-combo.top-25pfrom-topOfWindow {
+  /* position: sticky; */
+  /* top: 20%; */ }
+
+.scroll-photo-combo.top-25pfrom-topOfWindow-tog .scroll-photo-combo__photo {
+  position: sticky;
+  top: 20%;
+  filter: blur(0px) grayscale(1);
+  opacity: 0.06;
+  transform: scale(0.8); }
+
+.scroll-photo-combo.top-25pfrom-topOfWindow-tog .scroll-photo-combo__text {
+  position: relative;
+  z-index: 10;
+  min-height: 80vh;
+  display: flex;
+  align-items: center; }
+
+/* START SECTION TITLE */
+.section-title {
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
+  line-height: 1; }
+
+@media (min-width: 75rem) {
+  .section-title {
+    font-size: 3rem; } }
+
+h2.section-title span {
+  display: block; }
+
+.row-section-title.vh-100 {
+  height: unset !important; }
+  @media screen and (min-width: 50em) {
+    .row-section-title.vh-100 {
+      height: 100vh !important; } }
+@media screen and (min-width: 50em) {
+  .section-title-container {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    height: 100vh;
+    margin: 2rem;
+    padding: 0 calc((100vw - 70rem) / 2); } }
+
+@media screen and (min-width: 50em) {
+  .section-title-overview,
+  .section-title-column {
+    width: 50%; } }
+
+.section-title-overview {
+  flex: 1; }
+
+.row-section-title {
+  position: relative;
+  clip-path: inset(0 0 0 0);
+  padding: 2rem !important; }
+
+.section-title-overview {
+  opacity: 0;
+  transition: 1s all ease; }
+
+.top-25pfrom-topOfWindow .section-title-overview {
+  opacity: 1; }
+
+.section-title-overview p {
+  font-size: 1.46rem;
+  font-variation-settings: "wght" 300; }
+
+h2.section-title .super-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  margin-bottom: 1rem; }
+
+h2.section-title .main-title {
+  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif; }
+
+.row-section-title .content h2:after {
+  display: none; }
+
+h2.section-title {
+  line-height: 1; }
+
+h2.section-title .super-title {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem; }
+
+.story-intro h1 {
+  opacity: 0;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-fill-mode: forwards; }
+
+.component.story-intro h1.main-content-display-title {
+  font-size: 5rem !important;
+  margin-bottom: 6rem;
+  position: relative; }
+
+.story-intro p {
+  font-size: 1.4rem; }
+
+/*	story-item
+	===
+	This is a large, clickable card. It differs from a call-to-action card
+	in that it typically indicates a story or page, not a resource/action. 
+
+  There are these:
+  - two-col
+    - 60-40 (wide image)
+    - small-image
+  - one-col
+
+  @todo
+  - assemble markup for both
+  - organize this file better
+  - write up specs for the different kinds
+  
+
+*/
+/* STORIES LIST */
+.stories-item {
+  padding: 1.4rem;
+  position: relative;
+  z-index: 1;
+  transition: 0.4s all ease;
+  border-bottom: 1px solid #eee;
+  background: #fff; }
+
+.stories-list {
+  max-width: 70rem;
+  margin: 0 auto; }
+
+.stories-item h2:after {
+  transition: 0.4s all ease; }
+
+.stories-item:hover h2 {
+  color: #951829; }
+
+.stories-item:hover h2:after {
+  width: 12rem; }
+
+.stories-item-text h2 {
+  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif;
+  line-height: 1.1;
+  font-size: 2.3rem; }
+
+.stories-item-image {
+  overflow: hidden; }
+  @media screen and (max-width: 50em) {
+    .stories-item-image {
+      margin-bottom: 1rem; } }
+.stories-item img {
+  transition: 0.4s all ease; }
+
+.stories-item:hover img {
+  transform: scale(1.1); }
+
+.stories-item-text p {
+  font-size: 1.16rem; }
+
+.stories-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-color: transparent;
+  z-index: 10; }
+
+/*	stories-item--50-50 */
+/*	stories-item--60-40 */
+@media screen and (min-width: 50em) {
+  .stories-item.cols-60-40 {
+    display: flex;
+    gap: 2rem; } }
+
+@media screen and (min-width: 50em) {
+  .stories-item.cols-60-40 .stories-item-image {
+    max-width: 60%; } }
+
+.stories-item-text {
+  flex: 1; }
+
+/*	stories-item--small
+
+*/
+.stories-item {
+  border: none;
+  margin-bottom: 2rem; }
+
+.stories-item-text a {
+  text-decoration: none !important; }
+
+.stories-item-text h2 {
+  font-weight: bold !important; }
+
+.stories-item-image.small-image {
+  min-width: 10rem;
+  max-width: 40%; }
+
+.stories-item-text:hover h2 {
+  color: #e00 !important; }
+
+.stories-item-text a {
+  color: #444 !important; }
+
+.stories-item-text a:hover,
+.stories-item-text a:focus {
+  background-color: transparent !important;
+  color: #444 !important; }
+
+.stories-item-text a.stretched-link:focus:after {
+  border: 2px solid #f00; }
+
+.stories-column-row .stories-item {
+  gap: 1rem; }
+
+.stories-column-row .stories-item-text h2 {
+  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-variation-settings: "wght" 700;
+  font-size: 1.6rem; }
+
+.stories-column-row .stories-item-text h2:after {
+  left: 0; }
+
+a.stories-item {
+  text-decoration: none; }
+
+a.stories-item:hover {
+  background: #fff !important; }
+
+.stories-item.tile {
+  flex-direction: column-reverse;
+  display: flex;
+  margin: 0;
+  justify-content: flex-end; }
+  .stories-item.tile a.stretched-link:focus:after {
+    border: 1px solid #e00; }
+
+.stories-item.tile .stories-item-title {
+  margin: 0.6rem 0 0 0;
+  padding: 0;
+  font-size: 1.3rem;
+  font-variation-settings: "wght" 700;
+  line-height: 1.3;
+  position: unset; }
+  .stories-item.tile .stories-item-title a {
+    text-decoration: none; }
+    .stories-item.tile .stories-item-title a:hover, .stories-item.tile .stories-item-title a:focus {
+      background: transparent !important;
+      color: #951829 !important; }
+
+.stories-item.tile .stories-item-title:after {
+  left: 0; }
+
+.stories-item.tile .stories-item-title:after {
+  left: 1.4rem;
+  margin-top: -0.9rem; }
