@@ -4,10 +4,18 @@
   display: none;
 }
 .visual-pullquote {
+  padding-bottom: 0;
+
   .content.py-3 {
     padding: 0 !important;
   }
 }
+@include breakpoint("medium", "max") {
+  .pullquote-bg {
+    margin-bottom: 1rem;
+  }
+}
+
 @include breakpoint("medium") {
   .q-border {
     width: 100%;

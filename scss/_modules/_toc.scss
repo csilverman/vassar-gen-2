@@ -1,0 +1,20 @@
+.table-of-contents {
+  font-family: "freight-text-pro";
+  font-size: 1.6rem;
+  text-align: center;
+//  font-style: italic;
+  padding: 0;
+  
+  li {
+    list-style: none;
+  }
+}
+ul.table-of-contents li {
+    margin: 0 !important;
+}
+
+ul.table-of-contents li a {
+    display: block;
+    padding: 0.4rem;
+    /* border-bottom: 1px solid #fff; */
+}

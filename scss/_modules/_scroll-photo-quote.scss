@@ -7,22 +7,30 @@
 
 .scroll-photo-combo__photo {
   transition: 1s all ease;
+    height: 100vh;
+  display: flex;
+  align-items: center;
 }
-.scroll-photo-combo.top-25pfrom-topOfWindow {
-  /* position: sticky; */
-  /* top: 20%; */
+.scroll-photo-combo__text {  
+  .large-section-title {
+    font-variation-settings: "wght" 800;
+  }
 }
-.scroll-photo-combo.top-25pfrom-topOfWindow-tog .scroll-photo-combo__photo {
+
+// .scroll-photo-combo.top-25pfrom-topOfWindow-tog .scroll-photo-combo__photo {
+.scroll-photo-combo.top-0pfrom-topOfWindow-tog .scroll-photo-combo__photo {
   position: sticky;
-  top: 20%;
+  top: 0%;
   filter: blur(0px) grayscale(1);
   opacity: 0.06;
   transform: scale(0.8);
 }
-.scroll-photo-combo.top-25pfrom-topOfWindow-tog .scroll-photo-combo__text {
+// .scroll-photo-combo.top-25pfrom-topOfWindow-tog 
+.scroll-photo-combo__text {
   position: relative;
   z-index: 10;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }

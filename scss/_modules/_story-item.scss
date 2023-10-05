@@ -72,14 +72,32 @@
 /*	stories-item--60-40 */
 
 .stories-item {
-  &.cols-60-40 {
+  &.cols-60-40,
+  &.cols-50-50,
+  &.cols-40-60 {
     @include breakpoint("medium") {
       display: flex;
       gap: 2rem;
     }
+  }
+  &.cols-60-40 {
     .stories-item-image {
       @include breakpoint("medium") {
         max-width: 60%;
+      }
+    }
+  }
+  &.cols-50-50 {
+    .stories-item-image {
+      @include breakpoint("medium") {
+        max-width: 50%;
+      }
+    }
+  }
+  &.cols-40-60 {
+    .stories-item-image {
+      @include breakpoint("medium") {
+        max-width: 40%;
       }
     }
   }
@@ -119,6 +137,20 @@
 }
 .stories-item-text a.stretched-link:focus:after {
   border: 2px solid #f00;
+}
+.stories-item-text .stories-item-title {
+  position: relative;
+}
+.stories-item-text .stories-item-title:after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  border-top: 2px solid #f00;
+  left: 0;
+  top: 100%;
+}
+.stories-item:hover .stories-item-title:after {
+  width: 12rem;
 }
 
 .stories-column-row .stories-item {
@@ -176,14 +208,20 @@ a.stories-item:hover {
     }
   }
 }
+
+//  makes sure that tiles in a grid layout have
+//  space below at mobile
+.row .stories-item.tile {
+  @include breakpoint("medium", "max") {
+    margin-bottom: 1rem;
+  }
+}
 .stories-item.tile .stories-item-title:after {
   //  display: none;
 }
 
 .stories-item.tile .stories-item-title:after {
-  left: 0;
-}
-.stories-item.tile .stories-item-title:after {
+  border-width: 1px;
   left: 1.4rem;
-  margin-top: -0.9rem;
+  margin-top: -1.1rem;
 }

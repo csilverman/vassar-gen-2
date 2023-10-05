@@ -1,0 +1,51 @@
+.link--cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: 0.4s all ease;
+
+  .fa-arrow-right {
+    padding: 0.4rem;
+    border-radius: 5rem;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--section-link-color, var(--color-vassar-burgundy));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s all ease;
+  }
+
+  &:hover,
+  &:focus {
+    .fa-arrow-right {
+      background: var(--section-link-color, var(--color-vassar-burgundy));
+      color: var(--section-bg-color, #fff);
+    }
+  }
+}
+.btn-link > span {
+    text-align: right;
+    line-height: 1.3;
+}
+
+
+.file-type-label {
+    text-transform: uppercase;
+    font-size: 1rem;
+    opacity: 0.7;
+
+    &:before {
+        content: " - ";
+    }
+}
+
+
+
+.link--cta.style-large {
+  /* test */
+  span {
+    letter-spacing: normal;
+    font-size: 1.4rem;
+  }
+}

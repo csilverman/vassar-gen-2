@@ -1,0 +1,5 @@
+//  Some basic styling for the Bootstrap carousel
+
+.carousel button:focus {
+  background: var(--carousel-btn-focus, #aaa);
+}

@@ -21,6 +21,18 @@
 .row-width-wide .content {
   max-width: 60rem;
 }
+
+.width-wide {
+  &:not(.component--main-content--default--default) {
+    max-width: 60rem;
+  }
+  &.component--main-content--default--default {
+    .content {
+      max-width: 60rem;
+    }
+  }
+}
+
 .row-full-width {
   padding-left: 0;
   padding-right: 0;

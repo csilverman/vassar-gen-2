@@ -1,6 +1,9 @@
 .bg-extralightgray {
-  background: #dee2e6;
-  --row-bg: #dee2e6;
+  background: $color-extralightgray;
+  --row-bg: $color-extralightgray;
+
+  //  Carousel styling
+  --carousel-btn-focus: #fff;
 }
 
 .component--main-content {
@@ -9,6 +12,10 @@
 .content p,
 .content h2 {
   color: var(--text-color, #4a4a4a);
+}
+.row-theme-black {
+  --row-bg: #111;
+  --text-color: #fff;
 }
 .row-theme-charcoal {
   --row-bg: #222;

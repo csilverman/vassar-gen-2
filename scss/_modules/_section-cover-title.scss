@@ -56,11 +56,15 @@ h2.section-title span {
 }
 
 .section-title-overview {
-  opacity: 0;
+  @include breakpoint("medium") {
+    opacity: 0;
+  }
   transition: 1s all ease;
 }
-.top-25pfrom-topOfWindow .section-title-overview {
-  opacity: 1;
+@include breakpoint("medium") {
+  .top-25pfrom-topOfWindow .section-title-overview {
+    opacity: 1;
+  }
 }
 .section-title-overview p {
   font-size: 1.46rem;
