@@ -167,7 +167,9 @@ h1.main-content-display-title:after {
       font-size: 3rem; } }
 .large-section-title {
   font-size: calc(1.825rem + 6.9vw);
-  font-family: "acumin-pro-extra-condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "acumin-pro-extra-condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1;
+  text-align: center; }
   @media (min-width: 1200px) {
     .large-section-title {
       font-size: 7rem; } }
@@ -552,17 +554,29 @@ p.character-item-bio {
   display: block;
   letter-spacing: 0.1rem; }
 
-.card-chrono {
+.card-info {
   background: var(--color-beige, #f7f2f2);
-  padding: 1.6rem;
-  width: 26rem;
-  border-right: 3px solid rgba(0, 0, 0, 0.04); }
-  .card-chrono p {
+  padding: 1.6rem; }
+  .card-info p {
     font-size: 1.2rem;
     line-height: 1.2;
     font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
-  .card-chrono header {
+  .card-info header {
     display: block !important; }
+
+.card--media {
+  display: flex;
+  gap: 1.4rem; }
+
+.media-container.media-large {
+  width: 10rem; }
+
+.card-text {
+  flex: 1; }
+
+.card-chrono {
+  width: 26rem;
+  border-right: 3px solid rgba(0, 0, 0, 0.04); }
   .card-chrono .chrono-date {
     display: inline-block;
     font-family: var(--serif);
@@ -637,6 +651,16 @@ This was the beginning of a basic Flickity slideshow. It's not used on the curre
   max-width: 60ch; }
 
 /* End Flickity */
+hr {
+  clear: both;
+  display: block;
+  width: 100%;
+  margin: 6rem;
+  margin-left: 0;
+  margin-right: 0; }
+  hr.space-around {
+    margin: 6rem; }
+
 /*
 image-on-side
 ===

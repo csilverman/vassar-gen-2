@@ -35,6 +35,9 @@
 .large-section-title {
   @include font-size(7rem);
   font-family: $condensed;
+
+  line-height: 1;
+  text-align: center;
 }
 
 .establishing-paragraph {

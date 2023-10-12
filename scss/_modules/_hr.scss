@@ -1,0 +1,12 @@
+hr {
+    clear: both;
+    display: block;
+    width: 100%;
+        margin: 6rem;
+        
+        margin-left: 0; 
+        margin-right: 0;           
+    &.space-around {
+        margin: 6rem;        
+    }
+}
