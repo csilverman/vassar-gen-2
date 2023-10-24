@@ -12,6 +12,10 @@
   margin-right: 4rem;
   margin-bottom: 4rem;
   margin-top: 2rem;
+
+  //  this places left items above the table of contents, if there is one.
+  z-index: 10;
+  position: relative;
 }
 
 .align-center {

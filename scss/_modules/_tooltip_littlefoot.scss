@@ -1,0 +1,68 @@
+
+.littlefoot {
+    --button-background-color: #fff;
+    --button-text-color: #222;
+    --button-active-background-color: #e00;
+    --button-active-text-color: #fff;
+  --button-height: 1.3rem;
+--popover-border: 1px solid #a00;
+
+--popover-transform: scale(0.8) translateZ(0);
+--popover-active-transform: scale(1) translateZ(0);
+  
+}
+
+.littlefoot__content {
+--popover-background-color: #fff;
+}
+
+.littlefoot__button svg {
+    display: none;
+}
+
+.littlefoot__button:after {
+    content: attr(data-footnote-id);
+    font-size: 1rem;
+    border-radius: 1rem;
+    font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    display: block;
+}
+
+.littlefoot__button {
+    padding: 0 0.4rem;
+    line-height: 0;
+    margin-right: 0.4rem;
+    border: 1px solid #222;
+}
+.littlefoot__button.is-active,
+.littlefoot__button:active,
+.littlefoot__button:focus,
+.littlefoot__button:hover {
+    border: 1px solid #600;  
+}
+
+.littlefoot__popover {
+    opacity: 0;
+}
+
+.littlefoot__popover.is-active {
+    opacity: 1;
+}
+
+.littlefoot__content p {
+    font-size: 1.2rem;
+}
+
+.littlefoot__content p {
+    font-size: 1.1rem;
+    font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-variation-settings: "wght" 380;
+    line-height: 1.3;
+}
+.littlefoot__content a[title="return to article"] {
+    display: none;
+}
+
+.littlefoot__content {
+    padding: 1rem;
+}

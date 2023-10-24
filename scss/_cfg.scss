@@ -14,6 +14,12 @@ $font-serif-main-content: "freight-text-pro", Georgia, serif;
 $sans-serif: "Source Sans Variable","acumin-pro","Helvetica Neue","Helvetica","Arial",sans-serif,"Helvetica Neue","Helvetica","Arial",sans-serif;
 $condensed: "acumin-pro-extra-condensed","Helvetica Neue","Helvetica","Arial",sans-serif;
 
+@mixin weight-sans-bold() {
+	font-variation-settings: "wght" 800;	
+}
+
+
+
 
 $color-beige: var(--color-beige, #f7f2f2);
 $color-extralightgray: var(--extralightgray, #dee2e6);
