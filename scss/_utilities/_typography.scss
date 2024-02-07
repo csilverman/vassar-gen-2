@@ -63,3 +63,42 @@ h3.story-heading {
     margin-bottom: 1.8rem;
     margin-top: 2rem;
 }
+
+
+//  SIZES
+//  ---
+//  The sizes contain both the ideal font weight for that size and
+//  type, 
+
+.font-sans-xsmall {
+  --lh-condensed: 1.2;
+  font-family: var(--sans-serif);
+  font-size: 1rem;
+  font-variation-settings: "wght" 400;    
+  
+  &.lh-condensed {
+    line-height: var(--lh-condensed);
+  }
+}
+
+.font-sans-small {
+  --lh-condensed: 1.2;
+  font-family: var(--sans-serif);
+  font-size: 1.1rem;
+  font-variation-settings: "wght" 400;    
+  
+  &.lh-condensed {
+    line-height: var(--lh-condensed);
+  }
+}  
+
+
+.font-serif-small {
+  --lh-condensed: 1.3;
+  font-family: $font-serif-main-content;
+  font-size: 1.3rem;
+
+  &.lh-condensed {
+    line-height: var(--lh-condensed) !important;
+  }    
+}

@@ -1,3 +1,31 @@
+ul.link-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 2rem 0;
+    column-gap: 1rem;
+
+  li {
+      list-style: none;
+      margin: 0 !important;
+      border-bottom: 1px solid #aaa;
+  }
+  
+  li a {
+      text-decoration: none !important;
+      display: block;
+      font-size: 1.1rem;
+      padding: 0.4rem 0;
+  }
+}
+
+
+.z-place-above-toc {
+  z-index: 10;
+  position: relative;  
+}
+
+
 .xw-4 .content {
   max-width: 76rem;
 }
@@ -46,3 +74,26 @@
 .mw-2 .content.py-3 {
   max-width: 58rem;
 }
+
+
+//  Responsive percentage-based widths
+
+.w-50p {
+  width: 50%;
+}
+.w-sm-50p {
+  @include breakpoint("small") {
+    width: 50%;
+  }
+}
+.w-md-50p {
+  @include breakpoint("medium") {
+    width: 50%;
+  }
+}
+
+
+
+
+
+

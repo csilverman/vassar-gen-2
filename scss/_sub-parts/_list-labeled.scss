@@ -2,14 +2,24 @@
   padding: 0;
 
   li {
+    line-height: var(--lh-condensed);
     list-style: none;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--list-rule-color, #ddd);
     margin-bottom: 0 !important;
     padding: 0.3rem 0;
-    font-size: 1.1rem;
+//    font-size: 1.1rem;
 
     &:last-child {
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid var(--list-rule-color-bb, var(--list-rule-color, #ddd));
+    }
+  }
+  
+  &.no-start-or-end-border {
+    li:first-child {
+      --list-rule-color: transparent;      
+    }
+    li:last-child {
+      --list-rule-color-bb: transparent;
     }
   }
 }

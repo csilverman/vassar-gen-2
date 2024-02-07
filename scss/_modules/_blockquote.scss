@@ -7,22 +7,30 @@
       margin: 4rem 4rem 4rem -10rem;
       text-align: right;
     }
-}
-
-.blockquote p {
-    font-family: "acumin-pro-extra-condensed","Helvetica Neue","Helvetica","Arial",sans-serif;
-    font-weight: 100;
-    @include font-size(3.6rem);
-    line-height: 1.1;
-    color: #db1056;
-}
-.blockquote cite {
-    font-family: "Source Sans Variable","acumin-pro","Helvetica Neue","Helvetica","Arial",sans-serif,"Helvetica Neue","Helvetica","Arial",sans-serif;
-    font-style: normal;
-    font-size: 1.4rem;
-    line-height: 1rem;
-    font-variation-settings: "wght" 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    color: #000;
+    p {
+        font-family: $condensed;
+        font-weight: 100;
+        line-height: 1.1;
+        color: #db1056;
+    }
+    &:not(.font-small) {
+        p {
+            @include font-size(3.6rem);
+        }
+    }
+    &.font-small {
+        p {
+            @include font-size(3rem);
+        }
+    }
+    cite {
+        font-family: $sans-serif;
+        font-style: normal;
+        font-size: 1.4rem;
+        line-height: 1rem;
+        font-variation-settings: "wght" 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: #000;
+    }
 }

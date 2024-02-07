@@ -1,0 +1,9 @@
+.inline-readmore {
+    font-family: $sans-serif;
+    @include size-sans-serif-xsmall();
+    text-transform: uppercase;
+    display: inline-block;
+    clear: both;
+    @include weight-sans-serif-xsmall-bold();
+    text-decoration: none;
+}
