@@ -1,0 +1,18 @@
+/*
+  Currently, the scroll-photo-combo styling and markup can apply to a
+  couple of different components, like a large scroll-in quote, or the
+  cover title for a section. The following is for a section's cover title.
+
+  Future:
+  - Have a class for all section cover titles
+  - Move scroll-photo-combo styling to a "prototypes" folder
+    so, like the media object or a clean list, it's generic base styling
+    that can be expanded on in different instances. 
+*/
+
+.scroll-photo-combo__photo img {
+    height: 100vh;
+    object-fit: contain;
+}
+
+

@@ -46,13 +46,34 @@
 }
 
 
+
 .component--main-content.story-intro-section {
   .content {
     .main-content-display-title {
-      @include font-size(8rem);
+      .field--type-text.field__item {
+        font-size: inherit !important;
+      }
+
+      font-size: var(--story-display-title-fontsize, 4rem) !important;
+      line-height: var(--story-display-title-lineheight, 1) !important;
     }    
   }
 }
+
+//  the smallest size the headline gets (mobile)
+$min-headline-size: 4rem;
+
+.story-intro-section {
+  &.headline-size-5rem {
+    --story-display-title-fontsize: clamp($min-headline-size, 10vw, 5rem);
+    --story-display-title-lineheight: 0.9;
+  }
+
+  &.headline-size-6rem {
+    --story-display-title-fontsize: clamp($min-headline-size, 10vw, 6rem);
+  }
+}
+
 
 
 h3.story-heading {

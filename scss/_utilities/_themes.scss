@@ -13,6 +13,14 @@
 .content h2 {
   color: var(--text-color, #4a4a4a);
 }
+
+
+// makes sure the alert text has the right color
+article.node--type-alert .content p {
+  --text-color: #fff;
+}
+
+
 .row-theme-black {
   --row-bg: #111;
   --text-color: #fff;

@@ -1,4 +1,5 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
+@import "https://unpkg.com/littlefoot/dist/littlefoot.css";
 @keyframes fade-in {
   from {
     opacity: 0; }
@@ -115,6 +116,9 @@ h1.main-content-display-title:after {
 .content h2 {
   color: var(--text-color, #4a4a4a); }
 
+article.node--type-alert .content p {
+  --text-color: #fff; }
+
 .row-theme-black {
   --row-bg: #111;
   --text-color: #fff; }
@@ -194,10 +198,18 @@ h1.main-content-display-title:after {
     .establishing-paragraph {
       font-size: 1.6rem; } }
 .component--main-content.story-intro-section .content .main-content-display-title {
-  font-size: calc(1.925rem + 8.1vw); }
-  @media (min-width: 1200px) {
-    .component--main-content.story-intro-section .content .main-content-display-title {
-      font-size: 8rem; } }
+  font-size: var(--story-display-title-fontsize, 4rem) !important;
+  line-height: var(--story-display-title-lineheight, 1) !important; }
+  .component--main-content.story-intro-section .content .main-content-display-title .field--type-text.field__item {
+    font-size: inherit !important; }
+
+.story-intro-section.headline-size-5rem {
+  --story-display-title-fontsize: clamp($min-headline-size, 10vw, 5rem);
+  --story-display-title-lineheight: 0.9; }
+
+.story-intro-section.headline-size-6rem {
+  --story-display-title-fontsize: clamp($min-headline-size, 10vw, 6rem); }
+
 h3.story-heading {
   font-size: 2.2rem !important;
   color: #641A2B;
