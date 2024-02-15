@@ -1,3 +1,45 @@
+.story-intro-section {
+	padding-bottom: 0;
+}
+
+.story-intro-section  .content {
+	padding-bottom: 0 !important;
+}
+
+.story-intro-section + .component--main-content {
+	padding-top: 0;
+}
+
+//  the smallest size the headline gets (mobile)
+$min-headline-size: 3rem;
+
+.component--main-content.story-intro-section {
+  .content {
+	.main-content-display-title {
+	  .field--type-text.field__item {
+		font-size: inherit !important;
+	  }
+
+	  font-size: var(--story-display-title-fontsize, clamp($min-headline-size, 10vw, 4rem)) !important;
+	  line-height: var(--story-display-title-lineheight, 1) !important;
+	}    
+  }
+}
+
+.story-intro-section {
+  &.headline-size-5rem {
+	--story-display-title-fontsize: clamp(#{$min-headline-size}, 10vw, 5rem);
+	--story-display-title-lineheight: 0.9;
+  }
+  &.headline-size-6rem {
+	--story-display-title-fontsize: clamp(#{$min-headline-size}, 10vw, 6rem);
+  }
+  &.headline-size-8rem {
+	  --story-display-title-fontsize: clamp(#{$min-headline-size}, 10vw, 8rem);
+	}
+}
+
+
 .story-intro h1 {
 	opacity: 0;
 	animation-name: example;

@@ -1,3 +1,7 @@
+/*
+	vassar-gen-2
+
+*/
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
 @import "https://unpkg.com/littlefoot/dist/littlefoot.css";
 @keyframes fade-in {
@@ -197,19 +201,6 @@ article.node--type-alert .content p {
   @media (min-width: 1200px) {
     .establishing-paragraph {
       font-size: 1.6rem; } }
-.component--main-content.story-intro-section .content .main-content-display-title {
-  font-size: var(--story-display-title-fontsize, 4rem) !important;
-  line-height: var(--story-display-title-lineheight, 1) !important; }
-  .component--main-content.story-intro-section .content .main-content-display-title .field--type-text.field__item {
-    font-size: inherit !important; }
-
-.story-intro-section.headline-size-5rem {
-  --story-display-title-fontsize: clamp($min-headline-size, 10vw, 5rem);
-  --story-display-title-lineheight: 0.9; }
-
-.story-intro-section.headline-size-6rem {
-  --story-display-title-fontsize: clamp($min-headline-size, 10vw, 6rem); }
-
 h3.story-heading {
   font-size: 2.2rem !important;
   color: #641A2B;
@@ -991,6 +982,31 @@ h2.section-title .super-title {
   display: block;
   font-size: 1.2rem;
   letter-spacing: 0.4rem; }
+
+.story-intro-section {
+  padding-bottom: 0; }
+
+.story-intro-section .content {
+  padding-bottom: 0 !important; }
+
+.story-intro-section + .component--main-content {
+  padding-top: 0; }
+
+.component--main-content.story-intro-section .content .main-content-display-title {
+  font-size: var(--story-display-title-fontsize, clamp(3rem, 10vw, 4rem)) !important;
+  line-height: var(--story-display-title-lineheight, 1) !important; }
+  .component--main-content.story-intro-section .content .main-content-display-title .field--type-text.field__item {
+    font-size: inherit !important; }
+
+.story-intro-section.headline-size-5rem {
+  --story-display-title-fontsize: clamp(3rem, 10vw, 5rem);
+  --story-display-title-lineheight: 0.9; }
+
+.story-intro-section.headline-size-6rem {
+  --story-display-title-fontsize: clamp(3rem, 10vw, 6rem); }
+
+.story-intro-section.headline-size-8rem {
+  --story-display-title-fontsize: clamp(3rem, 10vw, 8rem); }
 
 .story-intro h1 {
   opacity: 0;
