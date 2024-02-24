@@ -1,14 +1,3 @@
-/*	not working? Check for: 
-
-  $('.table-of-contents-section .content').append('
-<div class="dynamic-toc-box">
-</div>
-');
-
-Drupal is splitting that into different lines which breaks it.
-
-*/
-
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script>
 /* If anything breaks, it's probably CKEditor putting the inserted "dynamic-toc-box" markup on a new line. */
 jQuery(document).ready(function () {
@@ -49,14 +38,16 @@ jQuery(document).ready(function () {
   if (is_firefox) {
     jQuery('html').addClass('is-ff');
   }
+
 // sets up the waypoints that update the page index panel as the user scrolls through the story
 setUpIndexWaypoints();
+
 // sets up the dynamic table of contents
   $('.table-of-contents-section .content').append('<div class="dynamic-toc-box"></div>');
   var toc_contents = $('.table-of-contents').clone();
   $('.dynamic-toc-box').html(toc_contents);
   let distFromTopOfWindow = [0, 20, 25, 50, 75];
-  setUpTOCRevealWaypoint();
+	setUpTOCRevealWaypoint();
   for (var i = 0; i < distFromTopOfWindow.length; i++) {
     setUpBasicWaypoint(distFromTopOfWindow[i]);
     setUpRefreshWaypoint();
@@ -138,6 +129,8 @@ setUpIndexWaypoints();
       });
     }
   }
+
+
 function setUpIndexWaypoints() {
   var discreteElements = document.querySelectorAll('.field--name-field-page-components > a')
   for (var i = 0; i < discreteElements.length; i++) {
@@ -154,6 +147,7 @@ console.log(curItemName);
     });
   }
 }
+
   
 function toggleClass(theElement, theClass) {
   //  remove the class from everything that already has it

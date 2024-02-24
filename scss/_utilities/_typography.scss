@@ -96,3 +96,35 @@ h3.story-heading {
     line-height: var(--lh-condensed) !important;
   }    
 }
+
+aside {
+  .small-caps-title {
+    font-family: var(--sans-serif);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+}
+
+h1, h2, h3 {
+  &.text-center {
+    &:after {
+      left: calc(50% - 2rem);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

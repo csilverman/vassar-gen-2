@@ -88,6 +88,16 @@ h1.main-content-display-title:after {
 .node--unpublished {
   padding: 0; }
 
+.bg-light-gray,
+.bg-lightgray {
+  background: #eee;
+  background: var(--lightgray, #ebf0f0); }
+
+.bg-watermark-gray {
+  /* called "Cream" on Alums; a reworking of that weird peach color that's part of our branding but nobody likes */
+  background-color: #f8f7f5; }
+
+.feature-place-right,
 .feature-align-right {
   float: right;
   margin-right: -16rem;
@@ -95,6 +105,7 @@ h1.main-content-display-title:after {
   margin-bottom: 4rem;
   margin-top: 2rem; }
 
+.feature-place-left,
 .feature-align-left {
   float: left;
   margin-left: -16rem;
@@ -104,6 +115,7 @@ h1.main-content-display-title:after {
   z-index: 10;
   position: relative; }
 
+.place-center,
 .align-center {
   margin-left: auto;
   margin-right: auto; }
@@ -132,17 +144,10 @@ article.node--type-alert .content p {
   --text-color: #ccc; }
 
 .row-theme-lightgray {
-  --row-bg: #ebf0f0; }
+  --row-bg: var(--lightgray, #ebf0f0); }
 
 .theme-lightgray {
-  --bg-color: #ebf0f0; }
-
-.bg-light-gray {
-  background: #eee; }
-
-.bg-watermark-gray {
-  /* called "Cream" on Alums; a reworking of that weird peach color that's part of our branding but nobody likes */
-  background-color: #f8f7f5; }
+  --bg-color: var(--lightgray, #ebf0f0); }
 
 .text-red {
   color: #e00; }
@@ -232,6 +237,15 @@ h3.story-heading {
   .font-serif-small.lh-condensed {
     line-height: var(--lh-condensed) !important; }
 
+aside .small-caps-title {
+  font-family: var(--sans-serif);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem; }
+
+h1.text-center:after, h2.text-center:after, h3.text-center:after {
+  left: calc(50% - 2rem); }
+
 .fade-in-on-scroll {
   opacity: 0;
   transition: 1s all ease; }
@@ -311,6 +325,18 @@ ul.link-list-grid {
 @media screen and (min-width: 50em) {
   .w-md-50p {
     width: 50%; } }
+
+.mw-standard {
+  --aside-width: 49rem; }
+
+.mw-60rem {
+  --aside-width: 60rem; }
+
+aside {
+  max-width: var(--aside-max-width, 49rem); }
+
+aside.aside--video {
+  --aside-max-width: 60rem; }
 
 .link--cta {
   display: flex;

@@ -1,3 +1,4 @@
+.feature-place-right,
 .feature-align-right {
   float: right;
   margin-right: -16rem;
@@ -6,6 +7,7 @@
   margin-top: 2rem;
 }
 
+.feature-place-left,
 .feature-align-left {
   float: left;
   margin-left: -16rem;
@@ -18,6 +20,7 @@
   position: relative;
 }
 
+.place-center,
 .align-center {
   margin-left: auto;
   margin-right: auto;

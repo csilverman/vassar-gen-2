@@ -1,0 +1,9 @@
+.bg-light-gray,
+.bg-lightgray {
+  background: #eee;
+  background: $color-lightgray;
+}
+.bg-watermark-gray {
+  /* called "Cream" on Alums; a reworking of that weird peach color that's part of our branding but nobody likes */
+  background-color: rgb(248, 247, 245);
+}

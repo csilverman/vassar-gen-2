@@ -93,7 +93,15 @@ ul.link-list-grid {
 }
 
 
+//  rem-based widths
 
+
+.mw-standard {
+  --aside-width: #{$standard-content-width};  
+}
+.mw-60rem {
+  --aside-width: 60rem;
+}
 
 
 

@@ -1,3 +1,7 @@
+//  This file defines specific themes: combinations of colors.
+//  This is not the same as _color-utils, which is just utility
+//  classes that apply single colors.
+
 .bg-extralightgray {
   background: $color-extralightgray;
   --row-bg: $color-extralightgray;
@@ -30,16 +34,9 @@ article.node--type-alert .content p {
   --text-color: #ccc;
 }
 .row-theme-lightgray {
-  --row-bg: #ebf0f0;
+  --row-bg: #{$color-lightgray};
 }
 
 .theme-lightgray {
-  --bg-color: #ebf0f0;
-}
-.bg-light-gray {
-  background: #eee;
-}
-.bg-watermark-gray {
-  /* called "Cream" on Alums; a reworking of that weird peach color that's part of our branding but nobody likes */
-  background-color: rgb(248, 247, 245);
+  --bg-color: #{$color-lightgray};
 }
