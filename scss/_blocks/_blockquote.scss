@@ -1,10 +1,12 @@
 .blockquote {
     
-    &.outdent-blockquote-left {
-        --item-padding: 2vw 2rem 2vw 1rem;
+    --basic-padding: clamp(1rem, 6vw, 2rem);
+    
+    &.place-left {
+        --item-padding: var(--basic-padding) 3rem var(--basic-padding) 1rem;
     }
-    &.outdent-blockquote-right {
-        --item-padding: 2vw 1rem 2vw 2rem;
+    &.place-right {
+        --item-padding: var(--basic-padding) 1rem var(--basic-padding) 3rem;
     }
 
     @include breakpoint('large') {

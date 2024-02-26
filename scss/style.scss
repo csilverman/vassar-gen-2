@@ -3,7 +3,11 @@
 
 */
 
-@import "~rfs";
+//	@import "~rfs";
+//	The following RFS is from https://github.com/twbs/rfs/issues/363#issuecomment-857712376
+//	(doesn't have the Dart sass deprecation error)
+@import "_vendor/_rfs";
+
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
 @import "https://unpkg.com/littlefoot/dist/littlefoot.css";
 

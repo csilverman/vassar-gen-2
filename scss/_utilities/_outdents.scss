@@ -1,3 +1,10 @@
+@include outdent("16rem", "16rem");
 @include outdent("24rem", "24rem");
+@include outdent("24rem", "24rem", ("marginalia": true));
+
 @include outdent("14%", "14pct");
-@include outdent("16%", "blockquote", ("scope-to-class": true) );
+
+//	This is best for short square items that are 50% wide
+@include outdent("25%", "25pct");
+
+@include outdent("26%", "blockquote", ("scope-to-class": true) );

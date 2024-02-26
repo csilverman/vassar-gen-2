@@ -20,7 +20,34 @@
   z-index: 10;
 }
 
-.card--storyHighlight {
+/*
+  @todo
+  
+  The card--storyHighlight design is something we will want to use outside stories as well. This
+  should be generified to just card--smallHighlight.
+
+*/
+
+// .card--storyHighlight {
+.card--smallHighlight {
+  
+  //  This specifies that the card is being used in a story. All storyHighlights should have
+  //  the same width. If a storyHighlight is used elsewhere, it might need a different width,
+  //  which is why I scoped this width to an .in-story class.
+  
+  //  They're also always indented; --side-space is a CSS var used by the
+  //  outdent utility class to add space between the card and the main content.
+  
+  &.in-story {
+    width: 50%;
+
+    @include breakpoint("large") {
+      width: 22rem;
+    }
+//    max-width: 22rem;
+    --side-space: 3rem;      
+  }
+  
   &.grayscaleImage {
     .card-image-container img {
       filter: grayscale(1) contrast(1.2);
@@ -35,32 +62,32 @@
         line-height: 1.2;
     }
   }
-}
-
-.card-image-container {
-  background: #c6aa76;
-}
-
-.card-title {
-  line-height: 1.26;
-  font-variation-settings: "wght" 700;
-}
-.card-image-container {
-  img {
-    width: 100%;
+  .card-image-container {
+    background: #c6aa76;
   }
-  .align-center {
-    margin: 0;
+  
+  .card-title {
+    line-height: 1.26;
+    font-variation-settings: "wght" 700;
+
+    .supertitle {
+      font-size: 1rem;
+      text-transform: uppercase;
+      display: block;
+      letter-spacing: 0.1rem;
+    }
+  }
+  .card-image-container {
+    img {
+      width: 100%;
+    }
+    .align-center {
+      margin: 0;
+    }
+  }
+  .card h3 a:link:hover, .card h3 a:link:focus, .card h3 a:visited:hover, .card h3 a:visited:focus {
+    background: #951829 !important;
+    color: #fff !important;
   }
 }
-.card h3 a:link:hover, .card h3 a:link:focus, .card h3 a:visited:hover, .card h3 a:visited:focus {
-  background: #951829 !important;
-  color: #fff !important;
-}
-
-.card-title .supertitle {
-  font-size: 1rem;
-  text-transform: uppercase;
-  display: block;
-  letter-spacing: 0.1rem;
-}
+  

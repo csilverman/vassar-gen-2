@@ -1,3 +1,6 @@
+
+/*  The row at the beginning of the story */
+
 .table-of-contents {
   font-family: "freight-text-pro";
   font-size: 1.6rem;
@@ -17,4 +20,48 @@ ul.table-of-contents li a {
     display: block;
     padding: 0.4rem;
     /* border-bottom: 1px solid #fff; */
+}
+
+
+
+
+/*  The fixed-position, dynamically updated TOC */
+
+.dynamic-toc-box {
+    opacity: 0;
+    transition: 0.4s all ease;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+//    height: 100%;
+    display: none;
+    align-items: end;
+    z-index: 10;
+    width: calc((100vw - 49rem) / 2);
+
+    @include breakpoint("medium") {
+      display: flex;
+    }
+
+    .table-of-contents {
+        padding: 2rem;
+        font-family: $sans-serif;
+        text-align: left;
+        font-size: 1rem;
+    }
+    .active a {
+        @include weight-sans-bold();
+    }
+}
+
+.toc-is-visible .dynamic-toc-box {
+    opacity: 1;
+}
+
+
+
+.dynamic-toc-box li:not(.active) a {
+    color: #777;
+    text-decoration: none;
 }
