@@ -1,5 +1,15 @@
 .blockquote {
-    width: 50%;
+    
+    &.outdent-blockquote-left {
+        --item-padding: 2vw 2rem 2vw 1rem;
+    }
+    &.outdent-blockquote-right {
+        --item-padding: 2vw 1rem 2vw 2rem;
+    }
+
+    @include breakpoint('large') {
+        width: 60%;
+    }
 
     &.align-left {
       float: left;

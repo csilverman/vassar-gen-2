@@ -1,0 +1,3 @@
+@include outdent("24rem", "24rem");
+@include outdent("14%", "14pct");
+@include outdent("16%", "blockquote", ("scope-to-class": true) );

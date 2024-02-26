@@ -16,6 +16,10 @@ $breakpoints: (
 
 $standard-content-width: 49rem;
 
+:root {
+	--standard-content-width: #{$standard-content-width};
+}
+
 $font-serif-main-content: "freight-text-pro", Georgia, serif;
 $sans-serif: "Source Sans Variable","acumin-pro","Helvetica Neue","Helvetica","Arial",sans-serif,"Helvetica Neue","Helvetica","Arial",sans-serif;
 $condensed: "acumin-pro-extra-condensed","Helvetica Neue","Helvetica","Arial",sans-serif;
