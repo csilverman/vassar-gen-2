@@ -7,4 +7,6 @@
 //	This is best for short square items that are 50% wide
 @include outdent("25%", "25pct");
 
+@include outdent("25%", "card--historyStuff", ("scope-to-class": true) );
+
 @include outdent("26%", "blockquote", ("scope-to-class": true) );

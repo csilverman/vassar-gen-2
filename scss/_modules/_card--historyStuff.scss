@@ -1,8 +1,15 @@
 .card--historyStuff {
+  //  used by the outdent class to add space
+  --side-space: 2rem;
+  --item-padding: 1.6rem;
+  
   background: $color-beige;
   padding: 1.6rem;
-  width: 26rem;
   border-right: 3px solid rgba(0,0,0,0.04);
+
+  @include breakpoint("medium") {
+    width: 50%;
+  }
 
   p {
     font-size: 1.2rem;
@@ -23,3 +30,4 @@
     margin-bottom: 1.4rem;
   }  
 }
+
