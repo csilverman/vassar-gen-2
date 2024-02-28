@@ -695,6 +695,28 @@ ul.link-list-grid li a {
   --aside-width: 60rem;
 }
 
+.Media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Media-body {
+  flex: 1;
+}
+
+.Media-body,
+.Media-body :last-child {
+  margin-bottom: 0;
+}
+
+.Media--center {
+  align-items: center;
+}
+
+.Media--reverse > .Media-figure {
+  order: 1;
+}
+
 aside {
   max-width: var(--aside-max-width, 49rem);
 }
@@ -2107,3 +2129,5 @@ ul.table-of-contents li a {
 nav#toolbar-bar {
   display: none;
 }
+
+/*# sourceMappingURL=style.css.map */
