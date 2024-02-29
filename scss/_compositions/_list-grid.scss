@@ -1,0 +1,13 @@
+.list-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--grid-gap, 1rem clamp(1rem, 4vw, 3rem));
+
+  &.cols-2-md {
+    @include breakpoint("medium") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

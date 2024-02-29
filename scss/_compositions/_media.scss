@@ -9,11 +9,20 @@
 .Media {
   display: flex;
   align-items: flex-start;
+  gap: var(--media-gap, 1rem);
 //  margin-bottom: 1em;
 }
 
 .Media-figure {
 //  margin-right: 1em;
+
+  width: var(--media-width, 8rem);
+  
+  &.is-square {
+    overflow: hidden;
+    width: var(--media-width, 8rem);    
+    height: var(--media-width, 8rem);
+  }
 }
 
 .Media-body {

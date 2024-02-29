@@ -1,0 +1,38 @@
+//	This is built on the Media composition.
+//	This composition can be used as a basis for any item, or
+//	linked tile, that has an image on the left and
+//	content on the right
+
+.imageListItem {
+	border-bottom: var(--border, 1px solid rgba(0,0,0,0.1));
+    margin-bottom: var(--item-spacing, 0.6rem);
+	padding-bottom: var(--item-spacing, 0.6rem);
+
+	.item-title {
+		padding: 0 0 0.2rem 0;
+	}
+
+	.Media-figure.is-square {
+		position: relative;
+
+		img {
+				height: 100%;
+				object-fit: cover;    
+				position: absolute;
+				width: 100%;
+			}
+
+	}
+	
+	//	Links that cover an entire item are stretched via
+	//	Bootstrap's stretched-link class. The item needs
+	//	position-relative to constrain that stretched link
+	//	to just that item.
+	&.is-linked {
+		position: relative;
+		
+		//	if the .item-title is an h2, it comes with position:relative
+		//	styling. This unsets that so the link isn't constrained to the h2.
+		--heading-position: unset;
+	}
+}

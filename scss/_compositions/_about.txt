@@ -1,0 +1,3 @@
+# Compositions
+
+These are generic layouts; templates for building specific modules on top of.

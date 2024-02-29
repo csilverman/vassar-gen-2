@@ -1,0 +1,45 @@
+
+// I have the following situation, where h2s have a red border under them,
+// but anchor links in news-teaser items also have a red border under them
+// that expands on hover. So right now, the news item titles have two underlines:
+// a thin one that expands on hover and a thick one that doesn't.
+
+// The expanding link underline on teaser headline links is part of the
+// default Vassar theme styling. The h2 underline is not; it's part
+// of this new styling.
+
+.content {
+	h2 {
+		margin-bottom: var(--heading-space-below, 2rem);
+
+		//	Only apply the border if a h2 is *not* linked
+		//	since if it is, the anchor tag already has a border
+		&:not(:has(> a)):after {
+			//	By default, the h2 is set to position:relative in order
+			//	to have the slight underline. However, there are circumstances
+			//	- like if the h2 contains a stretched link - where we don't want
+			//	the h2 to be positioned relatively. I'm using a CSS var here
+			//	because .content h2 is very specific, and it's easier to change
+			//	a variable than override that level of specificity
+			position: var(--heading-position, relative);
+
+			border-top: 2px solid #f00;
+			content: "";
+			left: var(--heading-placement, 0);
+//			position: absolute;
+			top: 100%;
+			width: 4rem;
+		}
+	}
+}
+
+h2.main-content-display-title {
+	--heading-position: absolute;
+	--heading-placement: calc(50% - 2rem);
+}
+
+
+
+
+
+

@@ -14,18 +14,6 @@ h2.main-content-display-title {
   width: 40rem;
   margin: 0 auto 4rem auto;
 }
-.content h2 {
-  position: relative;
-  margin-bottom: 2rem;
-}
-.content h2:after {
-  position: absolute;
-  content: "";
-  width: 4rem;
-  border-top: 2px solid #f00;
-  left: 0;
-  top: 100%;
-}
 /*
 Commented out since it looked poor on regular h2s
 */
