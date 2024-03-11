@@ -188,6 +188,41 @@ h1.main-content-display-title:after {
 }
 
 @media screen and (min-width: 50em) and (max-width: 70em) {
+  .outdent-8rem {
+    width: 50%;
+    float: var(--placement);
+  }
+  .outdent-8rem.place-left {
+    --placement: left;
+  }
+  .outdent-8rem.place-right {
+    --placement: right;
+  }
+}
+@media screen and (min-width: 50em) {
+  .outdent-8rem {
+    float: var(--placement);
+    --outdent--distance: 8rem;
+    --outdent--distance-adjusted: calc(var(--outdent--distance) + var(--side-space, 0rem));
+    --gutter-width: calc((100vw - var(--standard-content-width)) / 2);
+    --final-outdent-distance: min(
+    var(--outdent--distance-adjusted),
+    var(--gutter-width)
+     );
+    --margin-space: min(calc(-1 * var(--final-outdent-distance)), 0rem);
+    padding: var(--item-padding, 0%);
+  }
+  .outdent-8rem.place-left {
+    --placement: left;
+    margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
+  }
+  .outdent-8rem.place-right {
+    --placement: right;
+    margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
+  }
+}
+
+@media screen and (min-width: 50em) and (max-width: 70em) {
   .outdent-16rem {
     width: 50%;
     float: var(--placement);
@@ -214,13 +249,11 @@ h1.main-content-display-title:after {
   }
   .outdent-16rem.place-left {
     --placement: left;
-    margin-left: var(--margin-space);
-    margin-right: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
   }
   .outdent-16rem.place-right {
     --placement: right;
-    margin-right: var(--margin-space);
-    margin-left: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
   }
 }
 
@@ -251,13 +284,11 @@ h1.main-content-display-title:after {
   }
   .outdent-24rem.place-left {
     --placement: left;
-    margin-left: var(--margin-space);
-    margin-right: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
   }
   .outdent-24rem.place-right {
     --placement: right;
-    margin-right: var(--margin-space);
-    margin-left: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
   }
 }
 
@@ -289,13 +320,11 @@ h1.main-content-display-title:after {
   }
   .marginalia-24rem.place-left {
     --placement: left;
-    margin-left: var(--margin-space);
-    margin-right: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
   }
   .marginalia-24rem.place-right {
     --placement: right;
-    margin-right: var(--margin-space);
-    margin-left: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
   }
 }
 
@@ -326,13 +355,11 @@ h1.main-content-display-title:after {
   }
   .outdent-14pct.place-left {
     --placement: left;
-    margin-left: var(--margin-space);
-    margin-right: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
   }
   .outdent-14pct.place-right {
     --placement: right;
-    margin-right: var(--margin-space);
-    margin-left: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
   }
 }
 
@@ -363,13 +390,11 @@ h1.main-content-display-title:after {
   }
   .outdent-25pct.place-left {
     --placement: left;
-    margin-left: var(--margin-space);
-    margin-right: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
   }
   .outdent-25pct.place-right {
     --placement: right;
-    margin-right: var(--margin-space);
-    margin-left: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
   }
 }
 
@@ -400,13 +425,11 @@ h1.main-content-display-title:after {
   }
   .outdent.card--historyStuff.place-left {
     --placement: left;
-    margin-left: var(--margin-space);
-    margin-right: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
   }
   .outdent.card--historyStuff.place-right {
     --placement: right;
-    margin-right: var(--margin-space);
-    margin-left: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
   }
 }
 
@@ -437,13 +460,11 @@ h1.main-content-display-title:after {
   }
   .outdent.blockquote.place-left {
     --placement: left;
-    margin-left: var(--margin-space);
-    margin-right: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
   }
   .outdent.blockquote.place-right {
     --placement: right;
-    margin-right: var(--margin-space);
-    margin-left: var(--side-space, 0rem);
+    margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
   }
 }
 
@@ -533,7 +554,6 @@ article.node--type-alert .content p {
   --text-color: var(--large-intro-text-color, #7b2626);
   line-height: 1;
   margin-bottom: 0.75em;
-  border-bottom: 1px solid;
   padding-bottom: 0.75em;
 }
 @media (min-width: 1200px) {
@@ -698,6 +718,22 @@ ul.link-list-grid li a {
   max-width: 58rem;
 }
 
+.w-60p {
+  width: 60%;
+}
+
+@media screen and (min-width: 30em) {
+  .w-sm-60p {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .w-md-60p {
+    width: 60%;
+  }
+}
+
 .w-50p {
   width: 50%;
 }
@@ -711,6 +747,22 @@ ul.link-list-grid li a {
 @media screen and (min-width: 50em) {
   .w-md-50p {
     width: 50%;
+  }
+}
+
+.w-33p {
+  width: 50%;
+}
+
+@media screen and (min-width: 30em) {
+  .w-sm-33p {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .w-md-33p {
+    width: 33%;
   }
 }
 

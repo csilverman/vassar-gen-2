@@ -78,6 +78,20 @@ ul.link-list-grid {
 
 //  Responsive percentage-based widths
 
+.w-60p {
+  width: 60%;
+}
+.w-sm-60p {
+  @include breakpoint("small") {
+    width: 60%;
+  }
+}
+.w-md-60p {
+  @include breakpoint("medium") {
+    width: 60%;
+  }
+}
+
 .w-50p {
   width: 50%;
 }
@@ -89,6 +103,20 @@ ul.link-list-grid {
 .w-md-50p {
   @include breakpoint("medium") {
     width: 50%;
+  }
+}
+
+.w-33p {
+  width: 50%;
+}
+.w-sm-33p {
+  @include breakpoint("small") {
+    width: 33%;
+  }
+}
+.w-md-33p {
+  @include breakpoint("medium") {
+    width: 33%;
   }
 }
 
