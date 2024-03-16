@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+
+  &-md-2 {
+    @include breakpoint("medium") {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--grid-gap, 2rem);      
+    }
+  }
+}

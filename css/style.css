@@ -774,6 +774,38 @@ ul.link-list-grid li a {
   --aside-width: 60rem;
 }
 
+.imageListItem {
+  border-bottom: var(--border, 1px solid rgba(0, 0, 0, 0.1));
+  margin-bottom: var(--item-spacing, 0.6rem);
+  padding-bottom: var(--item-spacing, 0.6rem);
+}
+.imageListItem .item-title {
+  padding: 0 0 0.2rem 0;
+}
+.imageListItem .Media-figure.is-square {
+  position: relative;
+}
+.imageListItem .Media-figure.is-square img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+.imageListItem.is-linked {
+  position: relative;
+  --heading-position: unset;
+}
+
+.grid {
+  display: grid;
+}
+@media screen and (min-width: 50em) {
+  .grid-md-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gap, 2rem);
+  }
+}
+
 .list-grid {
   margin: 0;
   padding: 0;
@@ -817,28 +849,6 @@ ul.link-list-grid li a {
 
 .Media--reverse > .Media-figure {
   order: 1;
-}
-
-.imageListItem {
-  border-bottom: var(--border, 1px solid rgba(0, 0, 0, 0.1));
-  margin-bottom: var(--item-spacing, 0.6rem);
-  padding-bottom: var(--item-spacing, 0.6rem);
-}
-.imageListItem .item-title {
-  padding: 0 0 0.2rem 0;
-}
-.imageListItem .Media-figure.is-square {
-  position: relative;
-}
-.imageListItem .Media-figure.is-square img {
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  width: 100%;
-}
-.imageListItem.is-linked {
-  position: relative;
-  --heading-position: unset;
 }
 
 aside {
@@ -1025,6 +1035,229 @@ aside.aside--video p {
   --heading-space-below: 0;
 }
 
+/*	story-item
+	===
+	This is a large, clickable card. It differs from a call-to-action card
+	in that it typically indicates a story or page, not a resource/action. 
+
+  There are these:
+  - two-col
+	- 60-40 (wide image)
+	- small-image
+  - one-col
+
+  @todo
+  - assemble markup for both
+  - organize this file better
+  - write up specs for the different kinds
+
+*/
+.story-list {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.story-item--twoCols {
+  padding: 1.4rem;
+  position: relative;
+  z-index: 1;
+  transition: 0.4s all ease;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  border: none;
+  margin-bottom: 2rem;
+}
+.story-item--twoCols:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-color: transparent;
+  z-index: 10;
+}
+.story-item--twoCols:hover img {
+  transform: scale(1.1);
+}
+.story-item--twoCols:hover .story-item-title:after {
+  width: 12rem;
+}
+.story-item--twoCols:hover h2 {
+  color: #951829;
+}
+.story-item--twoCols:hover h2 h2:after {
+  width: 12rem;
+}
+.story-item--twoCols h2:after {
+  transition: 0.4s all ease;
+}
+.story-item--twoCols img {
+  transition: 0.4s all ease;
+}
+@media screen and (min-width: 50em) {
+  .story-item--twoCols.cols-60-40, .story-item--twoCols.cols-50-50, .story-item--twoCols.cols-40-60 {
+    align-items: flex-start;
+    display: flex;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 50em) {
+  .story-item--twoCols.cols-60-40 .story-item-image {
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 50em) {
+  .story-item--twoCols.cols-50-50 .story-item-image {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 50em) {
+  .story-item--twoCols.cols-40-60 .story-item-image {
+    max-width: 40%;
+  }
+}
+.story-item--twoCols .story-item-image {
+  overflow: hidden;
+}
+@media screen and (max-width: 50em) {
+  .story-item--twoCols .story-item-image {
+    margin-bottom: 1rem;
+  }
+}
+.story-item--twoCols .story-item-text {
+  flex: 1;
+}
+.story-item--twoCols .story-item-text p {
+  font-size: 1.16rem;
+}
+.story-item--twoCols .story-item-text a {
+  color: #444 !important;
+  text-decoration: none !important;
+}
+.story-item--twoCols .story-item-text a:hover, .story-item--twoCols .story-item-text a:focus {
+  background-color: transparent !important;
+  color: #444 !important;
+}
+.story-item--twoCols .story-item-text a.stretched-link:focus:after {
+  border: 2px solid #f00;
+}
+.story-item--twoCols .story-item-text h2 {
+  font-weight: bold !important;
+  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif;
+  line-height: 1.1;
+  font-size: 2.3rem;
+}
+.story-item--twoCols .story-item-text:hover h2 {
+  color: #e00 !important;
+}
+.story-item--twoCols .story-item-text .story-item-title {
+  position: relative;
+}
+.story-item--twoCols .story-item-text .story-item-title:after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  border-top: 2px solid #f00;
+  left: 0;
+  top: 100%;
+}
+.story-item--twoCols .story-item-image.small-image {
+  min-width: 10rem;
+  max-width: 40%;
+}
+.story-item--twoCols .story-column-row .story-item {
+  gap: 1rem;
+}
+.story-item--twoCols .story-column-row .story-item-text h2 {
+  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-variation-settings: "wght" 700;
+  font-size: 1.6rem;
+}
+.story-item--twoCols .story-column-row .story-item-text h2:after {
+  left: 0;
+}
+.story-item--twoCols a.story-item {
+  text-decoration: none;
+}
+.story-item--twoCols a.story-item:hover {
+  background: #fff !important;
+}
+
+.story-item-supertitle {
+  text-transform: uppercase;
+  font-variation-settings: "wght" 600;
+  font-size: 1rem !important;
+  color: #888 !important;
+  letter-spacing: 0.04rem;
+  margin-bottom: 0.2rem;
+  margin-top: 1.6rem;
+}
+
+.story-item--tile {
+  padding: 1.4rem;
+  position: relative;
+  z-index: 1;
+  transition: 0.4s all ease;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  flex-direction: column-reverse;
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+}
+.story-item--tile:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-color: transparent;
+  z-index: 10;
+}
+.story-item--tile:hover img {
+  transform: scale(1.1);
+}
+.story-item--tile:hover .story-item-title:after {
+  width: 12rem;
+}
+.story-item--tile a.stretched-link:focus:after {
+  border: 1px solid #e00;
+}
+.story-item--tile .story-item-image {
+  overflow: hidden;
+}
+@media screen and (max-width: 50em) {
+  .story-item--tile .story-item-image {
+    margin-bottom: 1rem;
+  }
+}
+.story-item--tile .story-item-image img {
+  transition: 0.4s all ease;
+}
+.story-item--tile .story-item-title {
+  margin: 0.6rem 0 0 0;
+  padding: 0;
+  font-size: 1.3rem;
+  font-variation-settings: "wght" 700;
+  line-height: 1.3;
+  position: unset;
+}
+.story-item--tile .story-item-title:after {
+  border-width: 1px;
+  left: 1.4rem;
+  margin-top: -1.1rem;
+}
+.story-item--tile .story-item-title a {
+  text-decoration: none;
+}
+.story-item--tile .story-item-title a:hover, .story-item--tile .story-item-title a:focus {
+  background: transparent !important;
+  color: #951829 !important;
+}
+
+/*
+  .row .story-item.tile {
+	@include breakpoint("medium", "max") {
+	  margin-bottom: 1rem;
+	}
+  }
+*/
 .link--cta {
   display: flex;
   align-items: center;
@@ -1802,230 +2035,6 @@ h2.section-title .super-title {
 
 .story-intro p {
   font-size: 1.4rem;
-}
-
-/*	story-item
-	===
-	This is a large, clickable card. It differs from a call-to-action card
-	in that it typically indicates a story or page, not a resource/action. 
-
-  There are these:
-  - two-col
-    - 60-40 (wide image)
-    - small-image
-  - one-col
-
-  @todo
-  - assemble markup for both
-  - organize this file better
-  - write up specs for the different kinds
-
-
-*/
-/* STORIES LIST */
-.stories-item {
-  padding: 1.4rem;
-  position: relative;
-  z-index: 1;
-  transition: 0.4s all ease;
-  border-bottom: 1px solid #eee;
-  background: #fff;
-}
-
-.stories-list {
-  max-width: 70rem;
-  margin: 0 auto;
-}
-
-.stories-item h2:after {
-  transition: 0.4s all ease;
-}
-
-.stories-item:hover h2 {
-  color: #951829;
-}
-
-.stories-item:hover h2:after {
-  width: 12rem;
-}
-
-.stories-item-text h2 {
-  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif;
-  line-height: 1.1;
-  font-size: 2.3rem;
-}
-
-.stories-item-image {
-  overflow: hidden;
-}
-@media screen and (max-width: 50em) {
-  .stories-item-image {
-    margin-bottom: 1rem;
-  }
-}
-
-.stories-item img {
-  transition: 0.4s all ease;
-}
-
-.stories-item:hover img {
-  transform: scale(1.1);
-}
-
-.stories-item-text p {
-  font-size: 1.16rem;
-}
-
-.stories-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  border-color: transparent;
-  z-index: 10;
-}
-
-/*	stories-item--50-50 */
-/*	stories-item--60-40 */
-@media screen and (min-width: 50em) {
-  .stories-item.cols-60-40, .stories-item.cols-50-50, .stories-item.cols-40-60 {
-    display: flex;
-    gap: 2rem;
-  }
-}
-@media screen and (min-width: 50em) {
-  .stories-item.cols-60-40 .stories-item-image {
-    max-width: 60%;
-  }
-}
-@media screen and (min-width: 50em) {
-  .stories-item.cols-50-50 .stories-item-image {
-    max-width: 50%;
-  }
-}
-@media screen and (min-width: 50em) {
-  .stories-item.cols-40-60 .stories-item-image {
-    max-width: 40%;
-  }
-}
-
-.stories-item-text {
-  flex: 1;
-}
-
-/*	stories-item--small
-
-*/
-.stories-item {
-  border: none;
-  margin-bottom: 2rem;
-}
-
-.stories-item-text a {
-  text-decoration: none !important;
-}
-
-.stories-item-text h2 {
-  font-weight: bold !important;
-}
-
-.stories-item-image.small-image {
-  min-width: 10rem;
-  max-width: 40%;
-}
-
-.stories-item-text:hover h2 {
-  color: #e00 !important;
-}
-
-.stories-item-text a {
-  color: #444 !important;
-}
-
-.stories-item-text a:hover,
-.stories-item-text a:focus {
-  background-color: transparent !important;
-  color: #444 !important;
-}
-
-.stories-item-text a.stretched-link:focus:after {
-  border: 2px solid #f00;
-}
-
-.stories-item-text .stories-item-title {
-  position: relative;
-}
-
-.stories-item-text .stories-item-title:after {
-  position: absolute;
-  content: "";
-  width: 4rem;
-  border-top: 2px solid #f00;
-  left: 0;
-  top: 100%;
-}
-
-.stories-item:hover .stories-item-title:after {
-  width: 12rem;
-}
-
-.stories-column-row .stories-item {
-  gap: 1rem;
-}
-
-.stories-column-row .stories-item-text h2 {
-  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
-  font-variation-settings: "wght" 700;
-  font-size: 1.6rem;
-}
-
-.stories-column-row .stories-item-text h2:after {
-  left: 0;
-}
-
-a.stories-item {
-  text-decoration: none;
-}
-
-a.stories-item:hover {
-  background: #fff !important;
-}
-
-.stories-item.tile {
-  flex-direction: column-reverse;
-  display: flex;
-  margin: 0;
-  justify-content: flex-end;
-}
-.stories-item.tile a.stretched-link:focus:after {
-  border: 1px solid #e00;
-}
-
-.stories-item.tile .stories-item-title {
-  margin: 0.6rem 0 0 0;
-  padding: 0;
-  font-size: 1.3rem;
-  font-variation-settings: "wght" 700;
-  line-height: 1.3;
-  position: unset;
-}
-.stories-item.tile .stories-item-title a {
-  text-decoration: none;
-}
-.stories-item.tile .stories-item-title a:hover, .stories-item.tile .stories-item-title a:focus {
-  background: transparent !important;
-  color: #951829 !important;
-}
-
-@media screen and (max-width: 50em) {
-  .row .stories-item.tile {
-    margin-bottom: 1rem;
-  }
-}
-
-.stories-item.tile .stories-item-title:after {
-  border-width: 1px;
-  left: 1.4rem;
-  margin-top: -1.1rem;
 }
 
 /*  The row at the beginning of the story */

@@ -1,0 +1,85 @@
+
+  //  tiles are always meant to be displayed in a grid. Any space
+  //  around them should be a gap, not a margin.
+
+  .story-item--tile {
+	  padding: 1.4rem;
+	position: relative;
+	z-index: 1;
+	transition: 0.4s all ease;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+
+	//	places the title below the image
+	flex-direction: column-reverse;
+	display: flex;
+	margin: 0;
+	justify-content: flex-end;
+
+    &:hover {
+		transform: scale(1.03);
+		box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+		border-color: transparent;
+		z-index: 10;
+	
+		img {
+		  transform: scale(1.1);
+		}
+		.story-item-title:after {
+		  width: 12rem;
+		}
+	  }
+
+
+	a.stretched-link:focus:after {
+	  border: 1px solid #e00;
+	}
+    .story-item-image {
+		overflow: hidden;
+	
+		@include breakpoint("medium", "max") {
+		  margin-bottom: 1rem;
+		}
+
+	    img {
+			transition: 0.4s all ease;
+		}
+	  }
+
+	.story-item-title {
+	  margin: 0.6rem 0 0 0;
+	  padding: 0;
+	  font-size: 1.3rem;
+	  font-variation-settings: "wght" 700;
+	  line-height: 1.3;
+	  //  make sure the stretched-link fills tile
+	  position: unset;
+
+	  &:after {
+		border-width: 1px;
+		left: 1.4rem;
+		margin-top: -1.1rem;
+	  }
+
+	  a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+		  background: transparent !important;
+		  color: #951829 !important;
+		}
+	  }
+	}
+  }
+
+  //  makes sure that tiles in a grid layout have
+  //  space below at mobile
+/*
+  .row .story-item.tile {
+	@include breakpoint("medium", "max") {
+	  margin-bottom: 1rem;
+	}
+  }
+*/
