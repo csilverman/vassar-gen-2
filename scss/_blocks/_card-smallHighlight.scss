@@ -39,12 +39,6 @@
   //  outdent utility class to add space between the card and the main content.
   
   &.in-story {
-    width: 50%;
-
-    @include breakpoint("large") {
-      width: 22rem;
-    }
-//    max-width: 22rem;
     --side-space: 3rem;      
   }
   

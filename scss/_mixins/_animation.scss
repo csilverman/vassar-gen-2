@@ -1,0 +1,38 @@
+/*
+	This mixin reveals hidden content that is normally revealed
+	by Javascript. If JS is off, the content will be revealed
+	after 2s, or whatever $wait-time is set to.
+	
+	I'll be updating this mixin to include more animations
+	for other method of hiding content.
+
+	Since this references a class applied to the `html`
+	element, do not target any items under a specific html
+	class.
+	
+	Example: .page-template .section-title
+	
+	The generated CSS will be .no-js .page-template .section-title, which
+	won't work if both no-js and page-template are applied to html.
+*/
+
+//	define the animations here so they don't
+//	get recreated every time the mixin is called
+
+@keyframes opacity-reveal {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+
+@mixin reveal($property) {
+	$wait-time: 2s;
+	$duration: 2s;
+  
+  html:not(.js) & {
+	animation-name: #{$property}-reveal;
+	animation-delay: $wait-time;
+	animation-duration: $duration;
+	animation-fill-mode: forwards;
+  }
+}

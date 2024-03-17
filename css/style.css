@@ -9,6 +9,31 @@
 }
 
 /*
+	This mixin reveals hidden content that is normally revealed
+	by Javascript. If JS is off, the content will be revealed
+	after 2s, or whatever $wait-time is set to.
+
+	I'll be updating this mixin to include more animations
+	for other method of hiding content.
+
+	Since this references a class applied to the `html`
+	element, do not target any items under a specific html
+	class.
+
+	Example: .page-template .section-title
+
+	The generated CSS will be .no-js .page-template .section-title, which
+	won't work if both no-js and page-template are applied to html.
+*/
+@keyframes opacity-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*
   Outdent v1
   Feb 25, 2024
 */
@@ -36,8 +61,8 @@ more specific than .blockquote
   border-top: 2px solid #f00;
   content: "";
   left: var(--heading-placement, 0);
-  top: 100%;
-  width: 4rem;
+  top: var(--h2-border-top-distance, 100%);
+  width: var(--h2-border-width, 4rem);
 }
 
 h2.main-content-display-title {
@@ -974,13 +999,7 @@ aside.aside--video p {
 
 */
 .card--smallHighlight.in-story {
-  width: 50%;
   --side-space: 3rem;
-}
-@media screen and (min-width: 70em) {
-  .card--smallHighlight.in-story {
-    width: 22rem;
-  }
 }
 .card--smallHighlight.grayscaleImage .card-image-container img {
   filter: grayscale(1) contrast(1.2);
@@ -1033,6 +1052,58 @@ aside.aside--video p {
 
 .node--news--teaser {
   --heading-space-below: 0;
+}
+
+.section-title--plainText {
+  min-height: 50vh;
+  opacity: 0;
+  padding-bottom: 0 !important;
+  transition: 2s opacity ease;
+}
+html:not(.js) .section-title--plainText {
+  animation-name: opacity-reveal;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.section-title--plainText .large-section-title {
+  font-size: calc(1.825rem + 6.9vw);
+  font-family: "acumin-pro-extra-condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .section-title--plainText .large-section-title {
+    font-size: 7rem;
+  }
+}
+.section-title--plainText .content {
+  display: flex;
+  align-items: flex-end;
+}
+.section-title--plainText .main-content-display-title {
+  --h2-border-top-distance: calc(100% + 2rem);
+  --h2-border-width: 0;
+  --heading-placement: calc(50% - (var(--h2-border-width)/2));
+  font-family: "acumin-pro-extra-condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-size: calc(1.525rem + 3.3vw) !important;
+  font-weight: 300 !important;
+  position: relative;
+}
+.section-title--plainText .main-content-display-title:after {
+  transition: 1s all ease;
+  transition-delay: 0.6s;
+}
+@media screen and (min-width: 50em) {
+  .section-title--plainText .main-content-display-title {
+    font-size: 7rem !important;
+  }
+}
+.section-title--plainText.top-50pfrom-topOfWindow {
+  opacity: 1;
+}
+.section-title--plainText.top-50pfrom-topOfWindow .main-content-display-title {
+  --h2-border-width: 6rem;
 }
 
 /*	story-item

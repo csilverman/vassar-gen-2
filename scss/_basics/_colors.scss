@@ -27,8 +27,8 @@
 			content: "";
 			left: var(--heading-placement, 0);
 //			position: absolute;
-			top: 100%;
-			width: 4rem;
+			top: var(--h2-border-top-distance, 100%);
+			width: var(--h2-border-width, 4rem);
 		}
 	}
 }
