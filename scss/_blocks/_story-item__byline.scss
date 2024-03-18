@@ -1,0 +1,10 @@
+//	This block is used by both _story-item--tile
+//	and _story-item--twocols
+
+.story-item__byline {
+	display: block;
+	font-family: $sans-serif;
+	font-size: 1rem;
+	color: #666;
+	font-variation-settings: "wght" 600;
+}

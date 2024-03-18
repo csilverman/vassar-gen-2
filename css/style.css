@@ -876,6 +876,13 @@ ul.link-list-grid li a {
   order: 1;
 }
 
+.stories-tile-grid {
+  --grid-gap: 1rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 aside {
   max-width: var(--aside-max-width, 49rem);
 }
@@ -1106,6 +1113,14 @@ html:not(.js) .section-title--plainText {
   --h2-border-width: 6rem;
 }
 
+.story-item__byline {
+  display: block;
+  font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  color: #666;
+  font-variation-settings: "wght" 600;
+}
+
 /*	story-item
 	===
 	This is a large, clickable card. It differs from a call-to-action card
@@ -1148,17 +1163,29 @@ html:not(.js) .section-title--plainText {
 .story-item--twoCols:hover img {
   transform: scale(1.1);
 }
-.story-item--twoCols:hover .story-item-title:after {
-  width: 12rem;
+.story-item--twoCols .story-item__title {
+  position: unset;
+  --underlineBorder-width: 4rem;
+  --underlineBorder-thickness: 1px;
+  background-image: linear-gradient(to right, var(--underlineBorder-color, #e00) 0%, var(--underlineBorder-color, #e00) 100%);
+  background-repeat: no-repeat;
+  background-position: 0px bottom;
+  background-image: linear-gradient(to right, var(--underlineBorder-color, #e00) 0%, var(--underlineBorder-color, #e00) 100%);
+  background-size: var(--underlineBorder-width, 6rem) var(--underlineBorder-thickness, 0.2rem);
+  transition-duration: var(--trans-duration, 0.4s);
+  transition-property: var(--trans-properties, background);
 }
-.story-item--twoCols:hover h2 {
-  color: #951829;
+.story-item--twoCols .story-item__title a {
+  color: var(--title-link-color, #333) !important;
 }
-.story-item--twoCols:hover h2 h2:after {
-  width: 12rem;
+.story-item--twoCols .story-item__title:after {
+  display: none;
 }
-.story-item--twoCols h2:after {
-  transition: 0.4s all ease;
+.story-item--twoCols:hover .story-item__title {
+  --underlineBorder-width: 8rem;
+}
+.story-item--twoCols:hover .story-item__title a {
+  --title-link-color: #e00;
 }
 .story-item--twoCols img {
   transition: 0.4s all ease;
@@ -1193,6 +1220,9 @@ html:not(.js) .section-title--plainText {
     margin-bottom: 1rem;
   }
 }
+.story-item--twoCols .story-item__byline {
+  margin-top: 0.4rem;
+}
 .story-item--twoCols .story-item-text {
   flex: 1;
 }
@@ -1200,35 +1230,20 @@ html:not(.js) .section-title--plainText {
   font-size: 1.16rem;
 }
 .story-item--twoCols .story-item-text a {
-  color: #444 !important;
   text-decoration: none !important;
 }
 .story-item--twoCols .story-item-text a:hover, .story-item--twoCols .story-item-text a:focus {
-  background-color: transparent !important;
-  color: #444 !important;
+  background-color: var(--title-link-bg, transparent) !important;
+  --title-link-color: #e00;
 }
 .story-item--twoCols .story-item-text a.stretched-link:focus:after {
   border: 2px solid #f00;
 }
-.story-item--twoCols .story-item-text h2 {
+.story-item--twoCols .story-item-text .story-item__title {
   font-weight: bold !important;
   font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman", serif;
   line-height: 1.1;
   font-size: 2.3rem;
-}
-.story-item--twoCols .story-item-text:hover h2 {
-  color: #e00 !important;
-}
-.story-item--twoCols .story-item-text .story-item-title {
-  position: relative;
-}
-.story-item--twoCols .story-item-text .story-item-title:after {
-  position: absolute;
-  content: "";
-  width: 4rem;
-  border-top: 2px solid #f00;
-  left: 0;
-  top: 100%;
 }
 .story-item--twoCols .story-item-image.small-image {
   min-width: 10rem;
@@ -1248,10 +1263,6 @@ html:not(.js) .section-title--plainText {
 .story-item--twoCols a.story-item {
   text-decoration: none;
 }
-.story-item--twoCols a.story-item:hover {
-  background: #fff !important;
-}
-
 .story-item-supertitle {
   text-transform: uppercase;
   font-variation-settings: "wght" 600;
@@ -1281,11 +1292,19 @@ html:not(.js) .section-title--plainText {
   border-color: transparent;
   z-index: 10;
 }
+.story-item--tile:hover a {
+  --title-link-color: #e00;
+}
 .story-item--tile:hover img {
   transform: scale(1.1);
 }
-.story-item--tile:hover .story-item-title:after {
-  width: 12rem;
+.story-item--tile a {
+  color: var(--title-link-color, #333) !important;
+  text-decoration: none;
+}
+.story-item--tile a:hover, .story-item--tile a:focus {
+  background-color: var(--title-link-bg, transparent) !important;
+  --title-link-color: #e00;
 }
 .story-item--tile a.stretched-link:focus:after {
   border: 1px solid #e00;
@@ -1301,25 +1320,20 @@ html:not(.js) .section-title--plainText {
 .story-item--tile .story-item-image img {
   transition: 0.4s all ease;
 }
-.story-item--tile .story-item-title {
-  margin: 0.6rem 0 0 0;
+.story-item--tile .story-item__byline {
+  margin-top: 0.3rem;
+}
+.story-item--tile .story-item__title {
+  margin: 1rem 0 0 0;
   padding: 0;
   font-size: 1.3rem;
-  font-variation-settings: "wght" 700;
-  line-height: 1.3;
+  font-variation-settings: "wght" 780;
+  line-height: 1.1;
   position: unset;
+  max-width: 24rem;
 }
-.story-item--tile .story-item-title:after {
-  border-width: 1px;
-  left: 1.4rem;
-  margin-top: -1.1rem;
-}
-.story-item--tile .story-item-title a {
-  text-decoration: none;
-}
-.story-item--tile .story-item-title a:hover, .story-item--tile .story-item-title a:focus {
-  background: transparent !important;
-  color: #951829 !important;
+.story-item--tile .story-item__title:after {
+  display: none !important;
 }
 
 /*

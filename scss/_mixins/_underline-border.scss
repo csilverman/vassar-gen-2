@@ -1,0 +1,23 @@
+//	Use this for applying background-gradient-based borders to
+//	both non-links and links.
+
+
+@mixin underlineBorder($border-color) {
+	
+	$underline-color: var(--underlineBorder-color, #e00);
+	
+	background-image: linear-gradient(to right, #{$underline-color} 0%, #{$underline-color} 100%);
+//	text-decoration: none;
+//	position: relative;
+	background-repeat: no-repeat;
+	background-position: 0px bottom;
+//	transition: background 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+//	transition-property: background, color;
+	background-image: linear-gradient(to right, #{$underline-color} 0%, #{$underline-color} 100%);
+	background-size:var(--underlineBorder-width, 6rem) var(--underlineBorder-thickness, 0.2rem);
+	
+	transition-duration: var(--trans-duration, 0.4s);
+	transition-property: var(--trans-properties, background);
+}
+
+
