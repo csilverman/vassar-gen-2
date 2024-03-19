@@ -26,17 +26,16 @@
   position: relative;
   z-index: 1;
   transition: 0.4s all ease;
-  border-bottom: 1px solid #eee;
-  background: #fff;
-
-  border: none;
+//  border-bottom: 1px solid #eee;
+  background-color: var(--bg-color, #fff);
+  border: 2px solid var(--border-color, transparent);
   margin-bottom: 2rem;
 
   &:hover {
 	transform: scale(1.03);
 	box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
 	cursor: pointer;
-	border-color: transparent;
+//	border-color: transparent;
 	z-index: 10;
 
 	img {
@@ -50,7 +49,13 @@
 	  --underlineBorder-thickness: 1px;
 	  
 	  a {
-		  color: var(--title-link-color, #333) !important;
+		color: var(--title-linkColor, #333) !important;
+
+		&:hover,
+		&:focus {
+			background-color: var(--title-linkBg, transparent) !important;
+			--title-linkColor: var(--title-linkColor-hover, #f00) !important;
+		}
 	  }
 	  
 	  @include underlineBorder(#e00);
@@ -126,20 +131,20 @@
 	}
 	a {
 	  text-decoration: none !important;
-
+	  /*
 	  &:hover,
 	  &:focus {
-		  background-color: var(--title-link-bg, transparent) !important;
-		 --title-link-color: #e00;
+		  background-color: var(--text-linkBg, transparent) !important;
+		 --title-linkColor: var(--text-linkColor-hover, #f00) !important;
 	  }
+	  */
 	  &.stretched-link:focus:after {
-		border: 2px solid #f00;
+		border: 2px solid var(--linkFocusBorder, #f00);
 	  }
 	}
 	.story-item__title {
 	  font-weight: bold !important;
-	  font-family: "freight-big-pro", "Georgia", "Times", "Times New Roman",
-		serif;
+	  font-family: $font-serif-display;
 	  line-height: 1.1;
 	  font-size: 2.3rem;
 	}
@@ -154,9 +159,7 @@
   }
 
   .story-column-row .story-item-text h2 {
-	font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue",
-	  "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial",
-	  sans-serif !important;
+	font-family: $sans-serif;
 	font-variation-settings: "wght" 700;
 	font-size: 1.6rem;
   }
@@ -171,6 +174,14 @@
 //	  background: #fff !important;
 	}
   }
+  
+	//	Themes
+	
+	&.theme-gray {
+		--bg-color: #{$color-lightgray};
+		--border-color: #fff;
+	}  
+  
 }
 
 .story-item-supertitle {
@@ -182,3 +193,9 @@
 	margin-bottom: 0.2rem;
 	margin-top: 1.6rem;
 }
+
+
+
+
+
+

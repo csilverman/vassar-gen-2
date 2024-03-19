@@ -18,6 +18,18 @@
 }
 
 
+.scroll-photo-combo__photo img {
+    max-height: 100vh;
+    width: auto;
+    margin: 0 auto;
+}
+
+.scroll-photo-combo__photo {
+    justify-content: center;
+}
+
+
+
 // .scroll-photo-combo.top-25pfrom-topOfWindow-tog .scroll-photo-combo__photo {
 .scroll-photo-combo.top-0pfrom-topOfWindow-tog .scroll-photo-combo__photo {
   position: sticky;

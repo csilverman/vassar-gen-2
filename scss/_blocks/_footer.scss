@@ -1,0 +1,6 @@
+//	have the footer scroll over any fixed-position table of contents
+
+.default.site-footer {
+	position: relative;
+	z-index: 20;
+}

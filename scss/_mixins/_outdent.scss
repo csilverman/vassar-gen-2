@@ -251,6 +251,12 @@ more specific than .blockquote
 //		margin-right: var(--side-space, 0rem);
 
 		margin: var(--y-space, 2rem) var(--side-space, 2rem) var(--y-space, 2rem) var(--margin-space);
+
+		//	This ensures that the element appears above the fixed-position table of
+		//	contents, if such a thing exists		
+		z-index: 10;
+		position: relative;
+
 		
 	  }
 	  &.place-right {
@@ -260,7 +266,15 @@ more specific than .blockquote
 
 		margin: var(--y-space, 2rem) var(--margin-space) var(--y-space, 2rem) var(--side-space, 2rem);
 
+		//	This ensures that the element appears above the fixed-position table of
+		//	contents, if such a thing exists		
+		z-index: 10;
+		position: relative;
+
+
 	  }
 	}
   }
 }
+
+

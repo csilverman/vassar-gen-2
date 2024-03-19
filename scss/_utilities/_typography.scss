@@ -1,6 +1,6 @@
 .serif-large {
   /* intro-text should be "serif-larger" */
-  font-family: var(--serif);
+  font-family: $font-serif-display;
   font-size: 2.2rem !important;
   line-height: 1.1 !important;
   margin-bottom: 2rem;
@@ -8,8 +8,9 @@
 }
 
 .serif-small-to-large {
-  font-family: var(--serif);
+  font-family: $font-serif-display;
   font-size: 1.4rem;
+
   @include breakpoint("medium", "max") {
     -webkit-text-stroke: 0.4px;
   }
@@ -22,10 +23,13 @@
 }
 
 .large-intro {
-    font-family: var(--serif);
-    @include font-size(3rem);
+    --text-fontFamily: #{$font-serif-display};
+//    @include font-size(3rem);
+    
+    @include rfs(3rem, --text-fontSize);
+    
     --text-color: var(--large-intro-text-color, #7b2626);
-    line-height: 1;
+    --text-lineHeight: 1;
     margin-bottom: 0.75em;
 //    border-bottom: 1px solid;
     padding-bottom: 0.75em;
@@ -114,7 +118,13 @@ h1, h2, h3 {
   }
 }
 
-
+.component--main-content .field--name-field-main-content-body h4.story-heading {
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    font-variation-settings: "wght" 700;
+}
 
 
 

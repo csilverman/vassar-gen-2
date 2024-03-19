@@ -43,6 +43,19 @@ ul.table-of-contents li a {
     @include breakpoint("medium") {
       display: flex;
     }
+    
+    li {
+      &:not(.active) a {
+          color: var(--dynamic-toc-box-linkColor, #666);
+          text-decoration: none;
+      }
+      a {
+        &:hover,
+        &:focus {
+          --dynamic-toc-box-linkColor: #fff;
+        }
+      }
+    }
 
     .table-of-contents {
         padding: 2rem;
@@ -59,9 +72,3 @@ ul.table-of-contents li a {
     opacity: 1;
 }
 
-
-
-.dynamic-toc-box li:not(.active) a {
-    color: #777;
-    text-decoration: none;
-}

@@ -1,6 +1,10 @@
 .blockquote {
     
     --basic-padding: clamp(1rem, 6vw, 2rem);
+
+    //  I'm giving them a color so they'll appear on top of
+    //  the fixed-position table of contents, if one exists
+    background: var(--blockquote-bgColor, #fff);
     
     &.place-left {
         --item-padding: var(--basic-padding) 3rem var(--basic-padding) 1rem;

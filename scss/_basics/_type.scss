@@ -1,0 +1,17 @@
+.component--main-content .field--name-field-main-content-body > p {
+	font-size: var(--text-fontSize, 1.4rem);
+	line-height: var(--text-lineHeight, 2.2rem);
+	font-weight: var(--text-fontWeight, normal);
+	font-family: var(--text-fontFamily, #{$font-serif-main-content});
+}
+.component--main-content .content {
+	max-width: 49rem;
+}
+@media (min-width: 1200px) {
+	.component--main-content.story-intro-section .content .main-content-display-title .field--type-text.field__item {
+		font-size: 8rem !important;
+	}
+}
+.component--main-content.story-intro-section .content .main-content-display-title .field--type-text.field__item {
+	font-size: calc(1.925rem + 8.1vw) !important;
+}
