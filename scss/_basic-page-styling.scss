@@ -2,6 +2,7 @@
 //  ---
 //  this is template-level stuff that applies to each page.
 
+.all-news-display-title,
 .main-content-display-title {
   background: none !important;
   color: #333 !important;
@@ -11,14 +12,17 @@
   margin-bottom: 3rem;
 
   @include font-size(4rem);
-}
-h1.main-content-display-title:after {
-  position: absolute;
-  content: "";
-  width: 4rem;
-  border: 2px solid #f00;
-  left: calc(50% - 2rem);
-  top: calc(100% + 1rem);
+
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 4rem !important;
+    border: 2px solid #f00;
+    left: calc(50% - 2rem) !important;
+    top: calc(100% + 1rem);
+  }
+
 }
 
 //  removes extra space at end of page

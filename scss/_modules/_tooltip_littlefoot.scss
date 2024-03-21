@@ -15,7 +15,9 @@
 .littlefoot__content {
 --popover-background-color: #fff;
 }
-
+.littlefoot__popover {
+    max-width: 28rem !important;
+}
 .littlefoot__button svg {
     display: none;
 }

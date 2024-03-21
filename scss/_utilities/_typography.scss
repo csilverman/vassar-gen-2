@@ -32,7 +32,7 @@
     --text-lineHeight: 1;
     margin-bottom: 0.75em;
 //    border-bottom: 1px solid;
-    padding-bottom: 0.75em;
+//    padding-bottom: 0.75em;
 }
 
 
@@ -46,7 +46,7 @@
 
 .establishing-paragraph {
   font-family: $font-serif-main-content;
-  @include font-size(1.6rem);
+    @include rfs(1.6rem, --text-fontSize);
 }
 
 
