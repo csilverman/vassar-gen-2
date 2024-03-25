@@ -863,10 +863,18 @@ ul.link-list-grid li a {
 
 .mw-60rem {
   --aside-width: 60rem;
+  max-width: 60rem;
+  --max-width: 60rem;
 }
 
 .mw-70rem {
   max-width: 70rem;
+  --max-width: 70rem;
+}
+
+.mw-100rem {
+  max-width: 100rem;
+  --max-width: 100rem;
 }
 
 .imageListItem {
@@ -897,6 +905,12 @@ ul.link-list-grid li a {
 @media screen and (min-width: 50em) {
   .grid-md-2 {
     grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gap, 2rem);
+  }
+}
+@media screen and (min-width: 50em) {
+  .grid-md-3 {
+    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--grid-gap, 2rem);
   }
 }
@@ -954,7 +968,7 @@ ul.link-list-grid li a {
 
 .stories-tile-grid {
   --grid-gap: 1rem;
-  max-width: 70rem;
+  max-width: var(--max-width, 70rem);
   margin-left: auto;
   margin-right: auto;
 }
@@ -996,6 +1010,10 @@ aside.aside--video p {
 .bio-list-item.compact .subtitle {
   font-size: 1rem !important;
   display: block;
+}
+
+blockquote {
+  z-index: unset;
 }
 
 .blockquote {
@@ -1148,23 +1166,20 @@ aside.aside--video p {
   opacity: 0;
   padding-bottom: 0 !important;
   transition: 2s opacity ease;
+  /*
+  	.large-section-title {
+    		@include font-size(7rem);
+    		font-family: $condensed;
+    		line-height: 1;
+    		text-align: center;
+  	}
+  */
 }
 html:not(.js) .section-title--plainText {
   animation-name: opacity-reveal;
   animation-delay: 2s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-}
-.section-title--plainText .large-section-title {
-  font-size: calc(1.825rem + 6.9vw);
-  font-family: "acumin-pro-extra-condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  line-height: 1;
-  text-align: center;
-}
-@media (min-width: 1200px) {
-  .section-title--plainText .large-section-title {
-    font-size: 7rem;
-  }
 }
 .section-title--plainText .content {
   display: flex;
@@ -1175,17 +1190,34 @@ html:not(.js) .section-title--plainText {
   --h2-border-width: 0;
   --heading-placement: calc(50% - (var(--h2-border-width)/2));
   font-family: "acumin-pro-extra-condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
-  font-size: calc(1.525rem + 3.3vw) !important;
   font-weight: 300 !important;
   position: relative;
+  font-size: var(--section-title--plainText-fontSize) !important;
+  --section-title--plainText-fontSize: calc(1.625rem + 4.5vw);
+}
+@media (min-width: 1200px) {
+  .section-title--plainText .main-content-display-title {
+    --section-title--plainText-fontSize: 5rem;
+  }
 }
 .section-title--plainText .main-content-display-title:after {
   transition: 1s all ease;
   transition-delay: 0.6s;
 }
-@media screen and (min-width: 50em) {
-  .section-title--plainText .main-content-display-title {
-    font-size: 7rem !important;
+.section-title--plainText.fontSize-small .main-content-display-title {
+  --section-title--plainText-fontSize: calc(1.625rem + 4.5vw);
+}
+@media (min-width: 1200px) {
+  .section-title--plainText.fontSize-small .main-content-display-title {
+    --section-title--plainText-fontSize: 5rem;
+  }
+}
+.section-title--plainText.fontSize-large .main-content-display-title {
+  --section-title--plainText-fontSize: calc(1.825rem + 6.9vw);
+}
+@media (min-width: 1200px) {
+  .section-title--plainText.fontSize-large .main-content-display-title {
+    --section-title--plainText-fontSize: 7rem;
   }
 }
 .section-title--plainText.top-50pfrom-topOfWindow {
@@ -2226,23 +2258,25 @@ h2.section-title .super-title {
 
 /*  The row at the beginning of the story */
 .table-of-contents {
-  font-family: "freight-text-pro";
+  font-family: "freight-text-pro", Georgia, serif;
   font-size: 1.6rem;
   text-align: center;
+  max-width: 40rem;
+  margin-left: auto !important;
+  margin-right: auto;
   padding: 0;
 }
 .table-of-contents li {
   list-style: none;
-}
-
-ul.table-of-contents li {
   margin: 0 !important;
 }
-
-ul.table-of-contents li a {
+.table-of-contents a {
   display: block;
+  font-size: 1.4rem;
   padding: 0.4rem;
-  /* border-bottom: 1px solid #fff; */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: #caa;
 }
 
 /*  The fixed-position, dynamically updated TOC */
@@ -2269,7 +2303,7 @@ ul.table-of-contents li a {
 .dynamic-toc-box li a:hover, .dynamic-toc-box li a:focus {
   --dynamic-toc-box-linkColor: #fff;
 }
-.dynamic-toc-box .table-of-contents {
+.dynamic-toc-box .dtb_table-of-contents {
   padding: 2rem;
   font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-align: left;

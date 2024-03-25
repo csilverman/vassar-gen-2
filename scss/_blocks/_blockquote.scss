@@ -1,3 +1,14 @@
+blockquote {
+    //  This fixes a z-index: -1 rule that's in the main theme
+    //  stylesheet. As far as I can tell, this was because there was
+    //  supposed to be a large quotation-mark decoration, but that's
+    //  been hidden. The -1 z-index is making footnotes unclickable.
+    z-index: unset;
+}
+
+
+//  @todo
+//  rename this to "pullquote" to distinguish it from HTML blockquotes
 .blockquote {
     
     --basic-padding: clamp(1rem, 6vw, 2rem);

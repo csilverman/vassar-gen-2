@@ -6,37 +6,56 @@
 
 	@include reveal('opacity');
 
+/*
 	.large-section-title {
   		@include font-size(7rem);
   		font-family: $condensed;
   		line-height: 1;
   		text-align: center;
 	}
+*/
+
 	.content {
 		display: flex;
 		align-items: flex-end;
 	}
-
+	
 	.main-content-display-title {
 		--h2-border-top-distance: calc(100% + 2rem);
 		--h2-border-width: 0;
 		--heading-placement: calc(50% - (var(--h2-border-width)/2));
 
-		font-family: "acumin-pro-extra-condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+		font-family: $condensed !important;
 		
-		font-size: calc(1.525rem + 3.3vw) !important;
 		font-weight: 300 !important;
 		position: relative;
+		
+		font-size: var(--section-title--plainText-fontSize) !important;
+
+//		@include rfs(7rem, --section-title--plainText-fontSize);
+		@include rfs(5rem, --section-title--plainText-fontSize);
 
 		&:after {
 			transition: 1s all ease;
 			transition-delay: 0.6s;
 		}
-
-		@include breakpoint("medium") {
-			font-size: 7rem !important;
+	}
+	
+	&.fontSize-small {
+		.main-content-display-title {
+			@include rfs(5rem, --section-title--plainText-fontSize);
 		}
 	}
+	
+	//	decided to make the default font size small, rather than large.
+	//	so the fontSize-small class is unnecessary.
+	&.fontSize-large {
+		.main-content-display-title {
+			@include rfs(7rem, --section-title--plainText-fontSize);
+		}
+	}
+
+	
 	&.top-50pfrom-topOfWindow {
 		opacity: 1;
 

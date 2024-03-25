@@ -55,6 +55,10 @@ setUpIndexWaypoints();
   $('.table-of-contents-section .content').append('<div class="dynamic-toc-box"></div>');
   var toc_contents = $('.table-of-contents').clone();
   $('.dynamic-toc-box').html(toc_contents);
+  
+  //  new: rename the TOC
+  $('.dynamic-toc-box .table-of-contents').toggleClass('table-of-contents dtb_table-of-contents');
+  
   let distFromTopOfWindow = [0, 20, 25, 50, 75];
   setUpTOCRevealWaypoint();
   for (var i = 0; i < distFromTopOfWindow.length; i++) {

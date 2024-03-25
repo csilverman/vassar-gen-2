@@ -2,27 +2,29 @@
 /*  The row at the beginning of the story */
 
 .table-of-contents {
-  font-family: "freight-text-pro";
+  font-family: $font-serif-main-content;
   font-size: 1.6rem;
   text-align: center;
 //  font-style: italic;
+  max-width: 40rem;
+  margin-left: auto !important;
+  margin-right: auto;
+
   padding: 0;
   
   li {
     list-style: none;
+    margin: 0 !important;
+  }
+  a {
+      display: block;
+      font-size: 1.4rem;
+      padding: 0.4rem;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      text-decoration-color: #caa;
   }
 }
-ul.table-of-contents li {
-    margin: 0 !important;
-}
-
-ul.table-of-contents li a {
-    display: block;
-    padding: 0.4rem;
-    /* border-bottom: 1px solid #fff; */
-}
-
-
 
 
 /*  The fixed-position, dynamically updated TOC */
@@ -57,7 +59,7 @@ ul.table-of-contents li a {
       }
     }
 
-    .table-of-contents {
+    .dtb_table-of-contents {
         padding: 2rem;
         font-family: $sans-serif;
         text-align: left;
