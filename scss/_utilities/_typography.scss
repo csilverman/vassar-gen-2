@@ -73,8 +73,15 @@
   text-align: center;
 }
 
+.article-content .establishing-paragraph,
 .establishing-paragraph {
-  font-family: $font-serif-main-content;
+//  font-family: $font-serif-main-content;
+
+//  --text-fontSize: 1.4rem;
+--text-lineHeight: 2.2rem;
+--text-fontWeight: normal;
+
+--text-fontFamily: #{$font-serif-main-content};
     @include rfs(1.6rem, --text-fontSize);
 }
 

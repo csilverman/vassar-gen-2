@@ -71,11 +71,27 @@ h2.main-content-display-title {
   --heading-placement: calc(50% - 2rem);
 }
 
+/*
 .component--main-content .field--name-field-main-content-body > p {
-  font-size: var(--text-fontSize, 1.4rem);
-  line-height: var(--text-lineHeight, 2.2rem);
-  font-weight: var(--text-fontWeight, normal);
-  font-family: var(--text-fontFamily, freight-text-pro, Georgia, serif);
+	font-size: var(--text-fontSize, 1.4rem);
+	line-height: var(--text-lineHeight, 2.2rem);
+	font-weight: var(--text-fontWeight, normal);
+	font-family: var(--text-fontFamily, freight-text-pro, Georgia, serif);
+}
+*/
+.component--main-content .field--name-field-main-content-body > p {
+  font-size: var(--text-fontSize) !important;
+  line-height: var(--text-lineHeight) !important;
+  font-weight: var(--text-fontWeight) !important;
+  font-family: var(--text-fontFamily) !important;
+}
+
+.article-content p,
+p.article-text {
+  --text-fontSize: 1.4rem;
+  --text-lineHeight: 2.2rem;
+  --text-fontWeight: normal;
+  --text-fontFamily: freight-text-pro, Georgia, serif;
 }
 
 .component--main-content .content {
@@ -688,11 +704,15 @@ article.node--type-alert .content p {
   }
 }
 
+.article-content .establishing-paragraph,
 .establishing-paragraph {
-  font-family: "freight-text-pro", Georgia, serif;
+  --text-lineHeight: 2.2rem;
+  --text-fontWeight: normal;
+  --text-fontFamily: freight-text-pro, Georgia, serif;
   --text-fontSize: calc(1.285rem + 0.42vw);
 }
 @media (min-width: 1200px) {
+  .article-content .establishing-paragraph,
   .establishing-paragraph {
     --text-fontSize: 1.6rem;
   }
@@ -1008,10 +1028,6 @@ ul.link-list-grid li a {
   margin-right: auto;
 }
 
-aside {
-  max-width: var(--aside-max-width, 49rem);
-}
-
 aside.aside--video {
   background-color: var(--lightgray, #ebf0f0);
   margin: 3rem auto;
@@ -1193,8 +1209,8 @@ blockquote {
   fill: var(--box-icon-color, #888);
 }
 .note-box--warning {
-  --box-bg: #ffedcc;
-  --box-icon-color: #ff5300;
+  --box-bg: #f2ece2;
+  --box-icon-color: #e00;
 }
 
 .imageListItem.compact {
@@ -2610,8 +2626,4 @@ ul.dtb_table-of-contents li {
   left: var(--knob-position);
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
-}
-
-nav#toolbar-bar {
-  display: none;
 }
