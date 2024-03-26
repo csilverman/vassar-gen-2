@@ -22,7 +22,7 @@
 }
 
 .story-item--twoCols {
-  padding: 1.4rem;
+  padding: min(3%, 1.4rem);
   position: relative;
   z-index: 1;
   transition: 0.4s all ease;

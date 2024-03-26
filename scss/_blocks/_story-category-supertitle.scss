@@ -1,0 +1,26 @@
+.story-category-supertitle {
+	margin-top: 3.4rem !important;
+
+	p {
+		font-family: $sans-serif;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.1rem;
+		font-variation-settings: "wght" 700;
+		letter-spacing: 0.1rem;
+	}
+	a {
+		text-decoration-thickness: 1px;
+		text-underline-offset: 1rem;
+		
+		&, &:visited {
+			color: #666;
+
+			&:hover, &:focus {
+				background: none !important;
+				color: #e00 !important;
+				text-decoration: none;
+			}
+		}
+	}
+}

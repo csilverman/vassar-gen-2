@@ -23,17 +23,46 @@
 }
 
 .large-intro {
+  --text-fontFamily: #{$font-serif-display};
+  --text-color: var(--large-intro-text-color, #7b2626);
+  --text-lineHeight: 1;
+
+  @include rfs(2.4rem, --text-fontSize);
+  
+  margin-bottom: 0.75em;
+
+  cite {
+      margin-top: 0.8rem;
+      display: block;
+      font-size: 0.8em;
+  }
+}
+
+.site-intro {
     --text-fontFamily: #{$font-serif-display};
-//    @include font-size(3rem);
-    
-    @include rfs(3rem, --text-fontSize);
-    
     --text-color: var(--large-intro-text-color, #7b2626);
     --text-lineHeight: 1;
+
+    @include rfs(3rem, --text-fontSize);
+    
     margin-bottom: 0.75em;
-//    border-bottom: 1px solid;
-//    padding-bottom: 0.75em;
 }
+
+.site-intro,
+.large-intro {
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.1em;
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #e00 !important;
+      background: transparent !important;
+    }
+  }
+}
+
 
 
 .large-section-title {

@@ -40,9 +40,9 @@
     display: none;
     align-items: end;
     z-index: 10;
-    width: calc((100vw - 49rem) / 2);
+    width: max(calc((100vw - 49rem) / 2), 16rem); //calc((100vw - 49rem) / 2);
 
-    @include breakpoint("medium") {
+    @include breakpoint("large") {
       display: flex;
     }
     
@@ -74,3 +74,11 @@
     opacity: 1;
 }
 
+
+ul.dtb_table-of-contents li {
+    list-style: none;
+}
+
+.dynamic-toc-box {
+    background: rgba(255,255,255,0.8);
+}

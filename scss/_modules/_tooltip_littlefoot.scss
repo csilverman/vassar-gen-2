@@ -68,3 +68,13 @@
 .littlefoot__content {
     padding: 1rem;
 }
+
+
+//  fixes a sporadic bug I've noticed where sometimes, every so
+//  often, when the moon is right and the hour is nigh, the wrapper
+//  is only 32px wide
+
+.littlefoot__wrapper {
+  max-width: none !important;
+  width: auto !important;
+}
