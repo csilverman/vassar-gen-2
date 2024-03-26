@@ -2,6 +2,7 @@
   //  tiles are always meant to be displayed in a grid. Any space
   //  around them should be a gap, not a margin.
 
+  .stories-item-tile,
   .story-item--tile {
 	padding: min(3%, 1.4rem);
 	position: relative;
@@ -47,7 +48,8 @@
 	a.stretched-link:focus:after {
 	  border: 1px solid #e00;
 	}
-    .story-item-image {
+    .stories-item-image,
+	.story-item-image {
 		overflow: hidden;
 	
 		@include breakpoint("medium", "max") {
@@ -62,6 +64,7 @@
 	  	margin-top: 0.3rem;
 	  }
 
+	.stories-item-title,
 	.story-item__title {
 	  margin: 1rem 0 0 0;
 	  padding: 0;

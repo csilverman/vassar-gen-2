@@ -1,0 +1,35 @@
+.stories-item.tile {
+	background: #fff;
+	position: relative;
+	padding: 1rem;
+}
+
+.stories-item.tile img {
+	width: 100%;
+}
+
+p.other-text.display-5 {
+	font-size: 4rem !important;
+	line-height: 1 !important;
+}
+
+.component--all-news.list h2.all-news-display-title::after {
+	bottom: 0 !important;
+}
+
+.stories-list .stories-item.cols-60-40 {
+	position: relative;
+	background: #fff;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.stories-list .stories-item-image {
+	width: 40rem !important;
+}
+
+.stories-list .stories-item-text {
+	flex: 1;
+}
