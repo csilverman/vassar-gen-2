@@ -1,4 +1,3 @@
-
 /*  The row at the beginning of the story */
 
 .table-of-contents {
@@ -36,11 +35,10 @@
     position: fixed;
     left: 0;
     bottom: 0;
-//    height: 100%;
     display: none;
     align-items: end;
     z-index: 10;
-    width: max(calc((100vw - 49rem) / 2), 16rem); //calc((100vw - 49rem) / 2);
+    width: 14rem;
 
     @include breakpoint("large") {
       display: flex;
@@ -52,6 +50,9 @@
           text-decoration: none;
       }
       a {
+        display: block;
+        padding: 0.3rem;
+
         &:hover,
         &:focus {
           --dynamic-toc-box-linkColor: #fff;
@@ -60,7 +61,7 @@
     }
 
     .dtb_table-of-contents {
-        padding: 2rem;
+        padding: 1.4rem;
         font-family: $sans-serif;
         text-align: left;
         font-size: 1rem;
@@ -77,8 +78,13 @@
 
 ul.dtb_table-of-contents li {
     list-style: none;
+    margin: 0 !important;
+    border-bottom: 1px solid #eee;
 }
 
 .dynamic-toc-box {
     background: rgba(255,255,255,0.8);
 }
+
+
+

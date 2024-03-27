@@ -1574,16 +1574,18 @@ html:not(.js) .section-title--plainText {
   letter-spacing: 0.1rem;
 }
 .story-category-supertitle a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  display: inline-block;
+  padding-bottom: 0.6rem;
 }
 .story-category-supertitle a, .story-category-supertitle a:visited {
   color: #666;
 }
 .story-category-supertitle a:hover, .story-category-supertitle a:focus, .story-category-supertitle a:visited:hover, .story-category-supertitle a:visited:focus {
   background: none !important;
+  border-color: transparent;
   color: #e00 !important;
-  text-decoration: none;
 }
 
 .link--cta {
@@ -2408,7 +2410,7 @@ h2.section-title .super-title {
   display: none;
   align-items: end;
   z-index: 10;
-  width: max((100vw - 49rem) / 2, 16rem);
+  width: 14rem;
 }
 @media screen and (min-width: 70em) {
   .dynamic-toc-box {
@@ -2419,11 +2421,15 @@ h2.section-title .super-title {
   color: var(--dynamic-toc-box-linkColor, #666);
   text-decoration: none;
 }
+.dynamic-toc-box li a {
+  display: block;
+  padding: 0.3rem;
+}
 .dynamic-toc-box li a:hover, .dynamic-toc-box li a:focus {
   --dynamic-toc-box-linkColor: #fff;
 }
 .dynamic-toc-box .dtb_table-of-contents {
-  padding: 2rem;
+  padding: 1.4rem;
   font-family: "Source Sans Variable", "acumin-pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   text-align: left;
   font-size: 1rem;
@@ -2438,6 +2444,8 @@ h2.section-title .super-title {
 
 ul.dtb_table-of-contents li {
   list-style: none;
+  margin: 0 !important;
+  border-bottom: 1px solid #eee;
 }
 
 .dynamic-toc-box {

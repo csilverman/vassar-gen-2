@@ -9,17 +9,20 @@
 		font-variation-settings: "wght" 700;
 		letter-spacing: 0.1rem;
 	}
+
 	a {
-		text-decoration-thickness: 1px;
-		text-underline-offset: 1rem;
+		text-decoration: none;
+		border-bottom: 1px solid;
+		display: inline-block;
+		padding-bottom: 0.6rem;
 		
 		&, &:visited {
 			color: #666;
 
 			&:hover, &:focus {
 				background: none !important;
+				border-color: transparent;
 				color: #e00 !important;
-				text-decoration: none;
 			}
 		}
 	}
