@@ -1230,6 +1230,15 @@ blockquote {
   --media-width: clamp(2vw, 10vw, 8rem);
   --item-spacing: 1rem;
 }
+@media screen and (max-width: 50em) {
+  .imageListItem.compact {
+    display: block;
+  }
+  .imageListItem.compact .Media-figure {
+    float: left;
+    margin-right: 0.8rem;
+  }
+}
 .imageListItem.compact .item-title {
   font-size: 1.3rem;
   font-variation-settings: "wght" 700;
@@ -2427,9 +2436,8 @@ h2.section-title .super-title {
   position: fixed;
   left: 0;
   bottom: 0;
-  display: none;
   align-items: end;
-  z-index: 10;
+  z-index: -1;
   width: 14rem;
 }
 @media screen and (min-width: 70em) {
@@ -2460,6 +2468,7 @@ h2.section-title .super-title {
 
 .toc-is-visible .dynamic-toc-box {
   opacity: 1;
+  z-index: 10;
 }
 
 ul.dtb_table-of-contents li {
@@ -2607,6 +2616,7 @@ ul.dtb_table-of-contents li {
 
 .littlefoot__popover.is-active {
   opacity: 1;
+  z-index: 100;
 }
 
 .littlefoot__content p {

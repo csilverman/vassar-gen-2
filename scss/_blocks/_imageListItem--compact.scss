@@ -5,6 +5,15 @@
 .imageListItem.compact {
 	--media-width: clamp(2vw, 10vw, 8rem);
 	--item-spacing: 1rem;
+
+	@include breakpoint("medium", "max") {
+		display: block;
+
+		.Media-figure {
+			float: left;
+			margin-right: 0.8rem;
+		}
+	}
 	
 	.item-title {
 		font-size: 1.3rem;
