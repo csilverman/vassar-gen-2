@@ -38,6 +38,15 @@
 //	border-color: transparent;
 	z-index: 10;
 
+    .cta-link--arrow {
+	  gap: 0.6rem;
+	  color: #e00;
+
+	  svg path {
+		fill: #e00;
+	  }
+	}
+
 	img {
 	  transform: scale(1.1);
 	}

@@ -1,0 +1,17 @@
+
+.cta-link--arrow {
+	font-variation-settings: "wght" 700;
+	font-size: 0.9rem;
+	display: flex;
+	gap: 0.4rem;
+
+	svg {
+		width: 1rem;
+
+		path {
+			fill: #951829;
+		}
+	}
+}
+
+

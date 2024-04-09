@@ -1188,6 +1188,19 @@ blockquote {
   color: #fff !important;
 }
 
+.cta-link--arrow {
+  font-variation-settings: "wght" 700;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.4rem;
+}
+.cta-link--arrow svg {
+  width: 1rem;
+}
+.cta-link--arrow svg path {
+  fill: #951829;
+}
+
 .default.site-footer {
   position: relative;
   z-index: 20;
@@ -1342,6 +1355,13 @@ html:not(.js) .section-title--plainText {
   box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 10;
+}
+.story-item--twoCols:hover .cta-link--arrow {
+  gap: 0.6rem;
+  color: #e00;
+}
+.story-item--twoCols:hover .cta-link--arrow svg path {
+  fill: #e00;
 }
 .story-item--twoCols:hover img {
   transform: scale(1.1);
