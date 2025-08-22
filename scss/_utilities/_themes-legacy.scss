@@ -1,0 +1,48 @@
+//  This file defines specific themes: combinations of colors.
+//  This is not the same as _color-utils, which is just utility
+//  classes that apply single colors.
+
+
+/*  2025-03-28
+    This uses class names that I think are only used on
+    Inclusive History. 
+*/
+
+.bg-extralightgray {
+  background: $color-extralightgray;
+  --row-bg: $color-extralightgray;
+
+  //  Carousel styling
+  --carousel-btn-focus: #fff;
+}
+
+.component--main-content {
+  background: var(--row-bg, transparent);
+}
+.content p,
+.content h2 {
+  color: var(--text-color, #4a4a4a);
+}
+
+
+// makes sure the alert text has the right color
+article.node--type-alert .content p {
+  --text-color: #fff;
+}
+
+
+.row-theme-black {
+  --row-bg: #111;
+  --text-color: #fff;
+}
+.row-theme-charcoal {
+  --row-bg: #222;
+  --text-color: #ccc;
+}
+.row-theme-lightgray {
+  --row-bg: #{$color-lightgray};
+}
+
+.theme-lightgray {
+  --bg-color: #{$color-lightgray};
+}
